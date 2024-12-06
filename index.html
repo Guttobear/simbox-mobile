@@ -156,7 +156,29 @@
 
     animation: uranium 50s; /* Add this line */
 }
-
+.load-menu {
+    position: fixed;
+    right: 0;
+    top: 50px; /* Adjust as needed */
+    width: 250px; /* Width of the menu */
+    background-color: #444;
+    color: white;
+    padding: 10px;
+    border-radius: 10px 0 0 10px;
+   
+    z-index: 1000; /* Ensure it's above other content */
+    gap: 10px;
+            height: 85vh; /* Add this line */
+            /* Space between buttons */
+            overflow-y: auto;
+}
+.savePopUp{
+    position:absolute;
+    right: 50%;
+    top: 25%;
+    color: lightgreen;
+   
+}
    </style>
 </head>
 
@@ -236,12 +258,168 @@
 
 
 
+   <button id="saveButton">Save</button>
+   <button id="loadButton">Load Game</button>
 
+   <div id="loadMenu" class="load-menu" style="display: none;">
+    <h2>Load Game</h2>
+    <div id="saveList"></div>
+    <button onclick="closeLoadMenu()">Close</button>
+</div>
+
+<div class="savePopUp" id="savePopUp" style="display: none;">Saving...</div>
 
 
 
   
    <script>
+
+function saveGame() {
+    if (isStorageFull()) {
+        console.warn("LocalStorage is full. Save aborted to prevent overflow.");
+        alert("Unable to save. Memory is full. Please delete old saves.");
+        return;
+    }
+
+    const gridState = JSON.stringify(grid);
+    const saveKey = `gameState_${Date.now()}`;
+
+    // Capture the canvas as an image
+    const canvas = document.getElementById('simulation');
+    if (!canvas) {
+        console.error("Canvas element not found");
+        return;
+    }
+    const imageData = canvas.toDataURL();
+
+    localStorage.setItem(saveKey, gridState);
+
+    // Save metadata
+    const saves = JSON.parse(localStorage.getItem('saves')) || [];
+    saves.push({ key: saveKey, date: new Date().toLocaleString(), image: imageData });
+    localStorage.setItem('saves', JSON.stringify(saves));
+    updateLoadMenu();
+
+    console.log("Game saved successfully!");
+}
+
+function isStorageFull(limitInBytes = 5 * 1024 * 1024) { // Default limit: 5MB
+    let total = 0;
+    for (let key in localStorage) {
+        if (localStorage.hasOwnProperty(key)) {
+            total += key.length + localStorage.getItem(key).length;
+        }
+    }
+    return total >= limitInBytes;
+}
+function openLoadMenu(){
+    document.getElementById('loadMenu').style.display = 'block'; // Show load menu
+    return;
+
+}
+setInterval(() => {
+        document.getElementById('savePopUp').style.display = 'none'; // Show load menu
+ }, 1000);
+function savepopup(){
+    document.getElementById('savePopUp').style.display = 'block'; // Show load menu
+  
+
+}
+function updateLoadMenu() {
+    const saves = JSON.parse(localStorage.getItem('saves')) || [];
+    const saveList = document.getElementById('saveList');
+    saveList.innerHTML = ''; // Clear previous saves
+
+    saves.forEach((save, index) => {
+        const saveItem = document.createElement('div');
+        saveItem.style.display = 'flex'; // Use flexbox for layout
+        saveItem.style.alignItems = 'center'; // Center items vertically
+        saveItem.style.marginBottom = '10px'; // Space between items
+        saveItem.innerHTML = `
+            <img src="${save.image}" alt="Save Thumbnail" style="width: 50px; height: 50px; margin-right: 10px;" />
+            <div style="flex-grow: 1;">
+                <p>Date: ${save.date}</p>
+            </div>
+            <button onclick="loadSpecificGame('${save.key}')">Load</button>
+            <button onclick="deleteSave(${index})">Delete</button>
+        `;
+        saveList.appendChild(saveItem);
+    });
+
+    
+}
+function deleteSave(index) {
+    const saves = JSON.parse(localStorage.getItem('saves')) || [];
+    
+    // Get the save key to delete the associated game state
+    const saveToDelete = saves[index]?.key;
+    
+    if (saveToDelete) {
+        localStorage.removeItem(saveToDelete); // Remove the game state from localStorage
+    }
+    
+    // Remove the save metadata at the specified index
+    saves.splice(index, 1);
+    
+    // Update the saves array in localStorage
+    localStorage.setItem('saves', JSON.stringify(saves));
+    
+    // Refresh the load menu to reflect the changes
+    updateLoadMenu();
+}
+
+function closeLoadMenu() {
+    document.getElementById('loadMenu').style.display = 'none'; // Hide load menu
+}
+function loadSpecificGame(saveKey) {
+    const savedState = localStorage.getItem(saveKey);
+    if (savedState) {
+        const gridState = JSON.parse(savedState);
+        
+        // Ensure the grid is initialized
+        initializeGrid();
+
+        // Restore the grid from the saved state
+        for (let row = 0; row < rows; row++) {
+            for (let col = 0; col < cols; col++) {
+                if (gridState[row] && gridState[row][col]) {
+                    grid[row][col] = gridState[row][col];
+                }
+            }
+        }
+        drawGrid(); // Redraw the grid to reflect the loaded state
+        closeLoadMenu(); // Close the load menu after loading
+    } else {
+        console.log("No saved game found.");
+    }
+}
+        function loadGame() {
+    const savedState = localStorage.getItem('gameState');
+    if (savedState) {
+        const gridState = JSON.parse(savedState);
+        
+        // Ensure the grid is initialized
+        initializeGrid();
+
+        // Restore the grid from the saved state
+        for (let row = 0; row < rows; row++) {
+            for (let col = 0; col < cols; col++) {
+                if (gridState[row] && gridState[row][col]) {
+                    grid[row][col] = gridState[row][col];
+                }
+            }
+        }
+        drawGrid(); // Redraw the grid to reflect the loaded state
+    } else {
+        console.log("No saved game found.");
+    }
+}
+document.getElementById('loadButton').addEventListener('click', updateLoadMenu);
+document.getElementById('loadButton').addEventListener('click', openLoadMenu);
+        document.getElementById('saveButton').addEventListener('click', saveGame);
+        document.getElementById('saveButton').addEventListener('click', savepopup);
+        document.getElementById('clear').addEventListener('click', ClearGrid);
+
 const glitchButton = document.getElementById('glitchButton');
 const originalText = "Glitch"; // Original text
 
@@ -5583,3 +5761,4 @@ canvas.addEventListener('touchmove', (e) => {
 </body>
 
 </html>
+
