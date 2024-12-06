@@ -5539,7 +5539,7 @@ canvas.addEventListener('touchmove', (e) => {
        let averageFrameTime = frameDelay; // Initial estimate for frame time
        
        // Smoothing factor for moving average (lower values smooth more)
-       const smoothingFactor = 0.01;
+       const smoothingFactor = 0.005;
        
        // Pause/Play button logic
        document.getElementById('pauseButton').addEventListener('click', () => {
@@ -5583,4 +5583,3 @@ canvas.addEventListener('touchmove', (e) => {
 </body>
 
 </html>
-
