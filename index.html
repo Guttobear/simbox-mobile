@@ -15,7 +15,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>SimboxMobile</title>
    <style>
-        body {
+    body {
             text-align: center;
             background-color: rgb(97, 97, 97);
             user-select: none; /* Prevent text selection */
@@ -42,7 +42,7 @@
             left: 10px;
             right: 10px;
             background-color: #444;
-            padding: 1vy;
+            padding: 1vh;
             color: white;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -156,7 +156,6 @@
 
     animation: uranium 50s; /* Add this line */
 }
-
    </style>
 </head>
 
@@ -225,6 +224,7 @@
     <button style="background-color: #595552; color: white;" class="material-button" onclick="selectedElement = 'gallium';">Gallium</button> 
     <button style="background-color: #909090" class="material-button" onclick="selectedElement = 'gravel';">Gravel</button>
     <button style="background-color: #4FC8BE" class="material-button" onclick="selectedElement = 'diamond';">Diamond</button>
+    <button style="background-color: white" class="material-button" onclick="selectedElement = 'flashbang';">Flashbang</button>
         <button class="material-button" onclick="selectedElement = 'empty';">None</button>
        <p>Brush size: <input type="range" id="brushSize"min="1"max="30" value="1"></p>
        <button id="pauseButton"></button> 
@@ -835,6 +835,24 @@ canvas.addEventListener('wheel', (e) => {
             color2:"#4FC8BE",
             type: "solid",
             density: 3
+        },
+        flashbang:{
+            color:'#5F5F5F',
+            type: 'solid',
+            density: 0.5,
+            unsafe: true
+        },
+        FExplosion:{
+            color: 'white',
+            type: 'solid',
+            density: 0,
+            unsafe: true
+        },
+        flash:{
+            color: 'white',
+            type: 'gas',
+            density: 0,
+            unsafe: true
         }
           
        };
@@ -3252,6 +3270,49 @@ if (cell.element === 'liquidN' && row < rows - 1) {
                          }
                      }
                  }
+                 if(cell.element === 'flashbang'){
+                     cell.age++;
+                     if(cell.age>=10){
+                         cell.age=0;
+                         cell.element='FExplosion';
+                     }
+                 }
+                 if(cell.element === 'flash'){
+                     cell.age++;
+                     if(cell.age>=5){
+                         cell.age=0;
+                         cell.element='empty';
+                     }
+                 }
+                 if(cell.element === 'FExplosion'){
+                     cell.age++;
+                     if(cell.age>=5){
+                         cell.age=0;
+                         cell.element='empty';
+                     }
+                 }
+                 if (cell.element === 'flashbang' && row < rows - 1) {
+                    
+                    if (grid[row + 1][col].element === 'empty') {
+                        grid[row + 1][col].element = 'flashbang';
+                        cell.element = 'empty'; }
+                   
+                     else {
+                        let leftSpread = col > 0 && grid[row + 1][col - 1].element === 'empty';
+                        let rightSpread = col < cols - 1 && grid[row + 1][col + 1].element === 'empty';
+                        if (leftSpread && rightSpread) {
+                            if (Math.random() < 0.5) leftSpread = false;
+                            else rightSpread = false;
+                        }
+                        if (leftSpread) {
+                            grid[row + 1][col - 1].element = 'flashbang';
+                            cell.element = 'empty';
+                        } else if (rightSpread) {
+                            grid[row + 1][col + 1].element = 'flashbang';
+                            cell.element = 'empty';
+                        }
+                    }
+                }
                    // Handle sand physics
                    if (cell.element === 'wax' && row < rows - 1) {
                     
@@ -3884,6 +3945,32 @@ if (cell.element === 'liquidN' && row < rows - 1) {
   }
   cell.element = 'empty'; // Remove the explosion after it has done its effect
 }
+if (cell.element === 'FExplosion') {
+  const fexplosionRadius = 5; // Define the explosion radius
+  const fstartRow = Math.max(0, row - fexplosionRadius);
+  const fendRow = Math.min(rows - 1, row + fexplosionRadius);
+  const fstartCol = Math.max(0, col - fexplosionRadius);
+  const fendCol = Math.min(cols - 1, col + fexplosionRadius);
+
+  // Set the center of the explosion to fire
+  cell.element = 'flash'; // Set the center cell to fire
+   cell.age=0;
+  for (let r = fstartRow; r <= fendRow; r++) {
+      for (let c = fstartCol; c <= fendCol; c++) {
+          const fdistance = Math.sqrt((r - row) ** 2 + (c - col) ** 2); // Calculate the distance from the explosion center
+          if (fdistance <= fexplosionRadius) {
+              // Check if the cell is TNT
+              if (grid[r][c] && grid[r][c].element === 'empty') {
+                 
+                 grid[r][c].element = 'flash'; // Ignite flammable material
+                 grid[r][c].age = 0; // Initialize fire's age
+                 
+             }
+          }
+      }
+  }
+ 
+}
 if (cell.element === 'nb') {
   const nexplosionRadius = 5; // Define the explosion radius
   const nstartRow = Math.max(0, row - nexplosionRadius);
@@ -3975,8 +4062,10 @@ if (cell.element === 'blackhole') {
            
               cell.element='blackhole';
               if (grid[r][c] && elements[grid[r][c].element]) {
+                  
                   grid[r][c].element = 'empty'; // Ignite flammable material
                   grid[r][c].age = 0; // Initialize fire's age
+                 
               }
           }
       }
@@ -5418,7 +5507,7 @@ if (cell.element === 'fog') {
              }
          }
      }
-         let lastPlacementTime = 0; // Variable to store the last placement time
+            let lastPlacementTime = 0; // Variable to store the last placement time
        const placementCooldown = 10; // Cooldown in milliseconds (adjust as needed)
        function placeElement(x, y) {
      const currentTime = Date.now(); // Get the current time
