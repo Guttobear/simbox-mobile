@@ -5427,9 +5427,8 @@ if (cell.element === 'fog') {
          return; // Exit the function if the cooldown has not passed
      }
  
-     const colStart = Math.floor(x / voxelSize);
-     const rowStart = Math.floor(y / voxelSize);
- 
+     const colStart = Math.floor((x - (brushSize * voxelSize) / 2) / voxelSize);
+     const rowStart = Math.floor((y - (brushSize * voxelSize) / 2) / voxelSize);
      // Check if the placement is within bounds
      if (rowStart < 0 || rowStart >= rows || colStart < 0 || colStart >= cols) {
          return; // Prevent placing outside the grid
