@@ -7434,8 +7434,8 @@ if (cell.element === 'fog') {
  
      for (let i = 0; i < brushSize; i++) {
          for (let j = 0; j < brushSize; j++) {
-             const row = rowStart + i;
-             const col = colStart + j;
+            const colStart = Math.floor(x / voxelSize);
+            const rowStart = Math.floor(y / voxelSize);
              
              // Check bounds for brush size
              if (row < 0 || row >= rows || col < 0 || col >= cols ) {
