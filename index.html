@@ -165,69 +165,66 @@
  <canvas id="simulation"></canvas>
    <div class="material-selector">
     <button style="background-color: rgba(0, 0, 255, 0.544);" class="material-button" onclick="selectedElement = 'water';">Water</button>
-        <button style="background-color: #A47449;" class="material-button" onclick="selectedElement = 'wood';">Wood</button>
-        <button style="background-color: #ff7700;" class="material-button"  onclick="selectedElement = 'lava';">Lava</button>
-        <button style="background-color: yellow;" class="material-button" onclick="selectedElement = 'sand';">Sand</button>
-        <button style="background-color: gray;" class="material-button" onclick="selectedElement = 'stone';">Stone</button>
-        <button style="background-color: #423223;" class="material-button" onclick="selectedElement = 'mud';">Mud</button>
-        <button style="background-color: green;" class="material-button" onclick="selectedElement = 'grass';">Grass</button>
-        <button style="background-color: lightblue;" class="material-button" onclick="selectedElement = 'ice';">Ice</button>
-        <button style="background-color: #f56a00;" class="material-button" onclick="selectedElement = 'fire';">Fire</button>
-        <button style="background-color: white;" class="material-button" onclick="selectedElement = 'snow';">Snow</button>
-        <button style="background-color: black; color: white;" class="material-button" onclick="selectedElement = 'oil';">Oil</button>
-        <button style="background-color: lightyellow;" class="material-button" onclick="selectedElement = 'sugar';">Sugar</button>
-        <button style="background-color: #8B0000;" class="material-button" onclick="selectedElement = 'magma';">Magma</button>
-        <button style="background-color: lightgray;" class="material-button" onclick="selectedElement = 'steam';">Steam</button>
-        <button style="background-color: #57422E;" class="material-button" onclick="selectedElement = 'dirt';">Dirt</button>
-        <button style="background-color: rgba(135, 206, 250, 0.5);" class="material-button" onclick="selectedElement = 'glass';">Glass</button>
-        <button style="background-color: #3C2F2F; color: white;" class="material-button" onclick="selectedElement = 'obsidian';">Obsidian</button>
-        <button style="background-color: #6b0458;" class="material-button" onclick="selectedElement = 'virus';">Virus</button>
-        <button style="background-color: rgba(104, 104, 104, 0.933);" class="material-button" onclick="selectedElement = 'concrete';">Cement</button>
-        <button style="background-color: red;" class="material-button" onclick="selectedElement = 'tnt';">Tnt</button>
-        <button style="background-color: green;" class="material-button"  id="uraniumButton" onclick="selectedElement = 'uranium';">Uranium</button>
-        <button style="background-color: #AC9E91" class="material-button" onclick="selectedElement = 'syrup';">Syrup</button>
-        <button style="background-color: #323232" class="material-button" onclick="selectedElement = 'smokeBomb';">Smokebomb</button>
-        <button style="background-color: #26C53B" class="material-button" onclick="selectedElement = 'Leaf';">Leaves</button>
-        <button style="background-color: #025A01" class="material-button" onclick="selectedElement = 'grenade';">Grenade</button>
-        <button style="background-color: pink" class="material-button" onclick="selectedElement = 'crystal';">Crystal</button>
-        <button style="background-color: rgb(78, 78, 78); color: white;" class="material-button" onclick="selectedElement = 'basalt';">Basalt</button>
-        <button style="background-color: orange" class="material-button" id="glitchButton"  onclick="selectedElement = 'glitch';">Glitch</button>
-        
-        <button style="background-color: gray" class="material-button" onclick="selectedElement = 'fly';">Fly</button>
-        <button style="background-color: #9E9D90" class="material-button" onclick="selectedElement = 'ash';">Ash</button>
-        <button style="background-color: #D5CF8D" class="material-button" onclick="selectedElement = 'human';">Human</button> 
-        <button style="background-color: black; color: white;" class="material-button" onclick="selectedElement = 'blackhole';">BlackHole</button>
-        <button style="background-color: #8DD5BF" class="material-button" onclick="selectedElement = 'liquidN';">liquidNitrogen</button> 
-        <button style="background-color: white" class="material-button" onclick="selectedElement = 'milk';">Milk</button> 
-        <button style="background-color: #A4A4A4" class="material-button" onclick="selectedElement = 'steel';">Steel</button>
-        <button style="background-color: #D5FB00" class="material-button" onclick="selectedElement = 'sponge';">Sponge</button> 
-        <button style="background-color: #C100FF" class="material-button" onclick="selectedElement = 'cloner';">Cloner</button> 
-        <button style="background-color: #F7CEFE" class="material-button" onclick="selectedElement = 'salt';">Salt</button> 
-        <button style="background-color: #FAB2F5" class="material-button" onclick="selectedElement = 'quartz';">Quartz</button> 
-        <button style="background-color: rgba(255, 255, 255, 0.5)" class="material-button" onclick="selectedElement = 'fog';">Fog</button> 
-        <button style="background-color: #CDCC9F" class="material-button" onclick="selectedElement = 'bone';">Bone</button>
-        <button style="background-color: #7EB534" class="material-button" onclick="selectedElement = 'moss';">Moss</button>
-        <button style="background-color: #FF8300" class="material-button" onclick="selectedElement = 'copper';">Copper</button>
-        <button style="background-color: #8C8C8C" class="material-button" onclick="selectedElement = 'mercury';">Mercury</button>
-        <button style="background-color: green" class="material-button" onclick="selectedElement = 'cactus';">Cactus</button>
-        <button style="background-color: #80FF54" class="material-button" onclick="selectedElement = 'acid';">Acid</button>
-        <button style="background-color: #474747" class="material-button" onclick="selectedElement = 'gunpowder';">Gunpowder</button>
-        <button style="background-color: #FF8700" class="material-button" onclick="selectedElement = 'nitro';">Nitroglycerin</button>
-        <button style="background-color: #EAEC42" class="material-button" onclick="selectedElement = 'sawdust';">Sawdust</button>
-        <button style="background-color: #97522F" class="material-button" onclick="selectedElement = 'rust';">Rust</button>
-        <button style="background-color: #F1EA08" class="material-button" onclick="selectedElement = 'pollen';">Pollen</button>
-        <button style="background-color: #C100FF" class="material-button" onclick="selectedElement = 'solidcloner';">Solid Cloner</button> 
-        <button style="background-color: #3C3C35; color: white;" class="material-button" onclick="selectedElement = 'coal';">Coal</button>
-        <button style="background-color: #ADBFE7" class="material-button" onclick="selectedElement = 'plastic';">Plastic</button>
-        <button style="background-color: #ECE2CE" class="material-button" onclick="selectedElement = 'wax';">Wax</button>
-        <button style="background-color: #39322C; color: white;" class="material-button" onclick="selectedElement = 'fuse';">Fuse</button> 
-        <button style="background-color: #595552; color: white;" class="material-button" onclick="selectedElement = 'gallium';">Gallium</button> 
-        <button style="background-color: #909090" class="material-button" onclick="selectedElement = 'gravel';">Gravel</button>
-        <button style="background-color: #4FC8BE" class="material-button" onclick="selectedElement = 'diamond';">Diamond</button>
-        <button style="background-color: white" class="material-button" onclick="selectedElement = 'flashbang';">Flashbang</button>
-        <button style="background-color: #165900; color: white;" class="material-button" onclick="selectedElement = 'nuke';">Nuke</button>
-        <button style="background-color: #EEE637" class="material-button" onclick="selectedElement = 'lasersource';">laser</button>
-        <button class="material-button" onclick="selectedElement = 'empty';">None</button>
+    <button style="background-color: rgba(0, 0, 255, 0.544);" class="material-button" onclick="selectedElement = 'water';">Water</button>
+    <button style="background-color: #A47449;" class="material-button" onclick="selectedElement = 'wood';">Wood</button>
+    <button style="background-color: #ff7700;" class="material-button"  onclick="selectedElement = 'lava';">Lava</button>
+    <button style="background-color: yellow;" class="material-button" onclick="selectedElement = 'sand';">Sand</button>
+    <button style="background-color: gray;" class="material-button" onclick="selectedElement = 'stone';">Stone</button>
+    <button style="background-color: #423223;" class="material-button" onclick="selectedElement = 'mud';">Mud</button>
+    <button style="background-color: green;" class="material-button" onclick="selectedElement = 'grass';">Grass</button>
+    <button style="background-color: lightblue;" class="material-button" onclick="selectedElement = 'ice';">Ice</button>
+    <button style="background-color: #f56a00;" class="material-button" onclick="selectedElement = 'fire';">Fire</button>
+    <button style="background-color: white;" class="material-button" onclick="selectedElement = 'snow';">Snow</button>
+    <button style="background-color: black; color: white;" class="material-button" onclick="selectedElement = 'oil';">Oil</button>
+    <button style="background-color: lightyellow;" class="material-button" onclick="selectedElement = 'sugar';">Sugar</button>
+    <button style="background-color: #8B0000;" class="material-button" onclick="selectedElement = 'magma';">Magma</button>
+    <button style="background-color: lightgray;" class="material-button" onclick="selectedElement = 'steam';">Steam</button>
+    <button style="background-color: #57422E;" class="material-button" onclick="selectedElement = 'dirt';">Dirt</button>
+    <button style="background-color: rgba(135, 206, 250, 0.5);" class="material-button" onclick="selectedElement = 'glass';">Glass</button>
+    <button style="background-color: #3C2F2F; color: white;" class="material-button" onclick="selectedElement = 'obsidian';">Obsidian</button>
+    <button style="background-color: #6b0458;" class="material-button" onclick="selectedElement = 'virus';">Virus</button>
+    <button style="background-color: rgba(104, 104, 104, 0.933);" class="material-button" onclick="selectedElement = 'concrete';">Cement</button>
+    <button style="background-color: red;" class="material-button" onclick="selectedElement = 'tnt';">Tnt</button>
+    <button style="background-color: green;" class="material-button"  id="uraniumButton" onclick="selectedElement = 'uranium';">Uranium</button>
+    <button style="background-color: #AC9E91" class="material-button" onclick="selectedElement = 'syrup';">Syrup</button>
+    <button style="background-color: #323232" class="material-button" onclick="selectedElement = 'smokeBomb';">Smokebomb</button>
+    <button style="background-color: #26C53B" class="material-button" onclick="selectedElement = 'Leaf';">Leaves</button>
+    <button style="background-color: #025A01" class="material-button" onclick="selectedElement = 'grenade';">Grenade</button>
+    <button style="background-color: pink" class="material-button" onclick="selectedElement = 'crystal';">Crystal</button>
+    <button style="background-color: rgb(78, 78, 78); color: white;" class="material-button" onclick="selectedElement = 'basalt';">Basalt</button>
+    <button style="background-color: orange" class="material-button" id="glitchButton"  onclick="selectedElement = 'glitch';">Glitch</button>
+    <button style="background-color: white"  class="material-button" id="randomButton"  onclick="selectedElement = 'random';">dN0Ram</button>
+    <button style="background-color: gray" class="material-button" onclick="selectedElement = 'fly';">Fly</button>
+    <button style="background-color: #9E9D90" class="material-button" onclick="selectedElement = 'ash';">Ash</button>
+    <button style="background-color: #D5CF8D" class="material-button" onclick="selectedElement = 'human';">Human</button> 
+    <button style="background-color: black; color: white;" class="material-button" onclick="selectedElement = 'blackhole';">BlackHole</button>
+    <button style="background-color: #8DD5BF" class="material-button" onclick="selectedElement = 'liquidN';">liquidNitrogen</button> 
+    <button style="background-color: white" class="material-button" onclick="selectedElement = 'milk';">Milk</button> 
+    <button style="background-color: #A4A4A4" class="material-button" onclick="selectedElement = 'steel';">Steel</button>
+    <button style="background-color: #D5FB00" class="material-button" onclick="selectedElement = 'sponge';">Sponge</button> 
+    <button style="background-color: #C100FF" class="material-button" onclick="selectedElement = 'cloner';">Cloner</button> 
+    <button style="background-color: #F7CEFE" class="material-button" onclick="selectedElement = 'salt';">Salt</button> 
+    <button style="background-color: #FAB2F5" class="material-button" onclick="selectedElement = 'quartz';">Quartz</button> 
+    <button style="background-color: rgba(255, 255, 255, 0.5)" class="material-button" onclick="selectedElement = 'fog';">Fog</button> 
+    <button style="background-color: #CDCC9F" class="material-button" onclick="selectedElement = 'bone';">Bone</button>
+    <button style="background-color: #7EB534" class="material-button" onclick="selectedElement = 'moss';">Moss</button>
+    <button style="background-color: #FF8300" class="material-button" onclick="selectedElement = 'copper';">Copper</button>
+    <button style="background-color: #8C8C8C" class="material-button" onclick="selectedElement = 'mercury';">Mercury</button>
+    <button style="background-color: green" class="material-button" onclick="selectedElement = 'cactus';">Cactus</button>
+    <button style="background-color: #80FF54" class="material-button" onclick="selectedElement = 'acid';">Acid</button>
+    <button style="background-color: #474747" class="material-button" onclick="selectedElement = 'gunpowder';">Gunpowder</button>
+    <button style="background-color: #FF8700" class="material-button" onclick="selectedElement = 'nitro';">Nitroglycerin</button>
+    <button style="background-color: #EAEC42" class="material-button" onclick="selectedElement = 'sawdust';">Sawdust</button>
+    <button style="background-color: #97522F" class="material-button" onclick="selectedElement = 'rust';">Rust</button>
+    <button style="background-color: #F1EA08" class="material-button" onclick="selectedElement = 'pollen';">Pollen</button>
+    <button style="background-color: #C100FF" class="material-button" onclick="selectedElement = 'solidcloner';">Solid Cloner</button> 
+    <button style="background-color: #3C3C35; color: white;" class="material-button" onclick="selectedElement = 'coal';">Coal</button>
+    <button style="background-color: #ADBFE7" class="material-button" onclick="selectedElement = 'plastic';">Plastic</button> 
+    <button style="background-color: #EEE637" class="material-button" onclick="selectedElement = 'lasersource';">laser</button>
+    <button style="background-color: #4FC8BE" class="material-button" onclick="selectedElement = 'diamond';">Diamond</button>
+    <button style="background-color: white" class="material-button" onclick="selectedElement = 'flashbang';">Flashbang</button>
+    <button style="background-color: #595552; color: white;" class="material-button" onclick="selectedElement = 'gallium';">Gallium</button> 
+    <button class="material-button" onclick="selectedElement = 'empty';">None</button>
         <p>Brush size: <input type="range" id="brushSize"min="1"max="30" value="1"></p>
        <button id="pauseButton"></button> 
        
@@ -376,8 +373,7 @@ canvas.addEventListener('wheel', (e) => {
             empty: {
                 color: '#616171',
                 type: 'empty',
-                density: 0,
-              
+                density: 0
                
             },
             water: {
@@ -385,7 +381,6 @@ canvas.addEventListener('wheel', (e) => {
                 type: 'liquid',
                 density: 1,
                 water: true
-
             },
             lava: {
                 colors: ['#Cf1020', '#FF4500', '#FF8C00'],
@@ -685,7 +680,7 @@ canvas.addEventListener('wheel', (e) => {
          density: 1
      },
      moss:{
-         initialColor:'#7EB534',
+        initialColor:'#7EB534',
          color1:'#7EB534',
          color2:'#78AC34',
          type: 'solid',
@@ -801,40 +796,17 @@ canvas.addEventListener('wheel', (e) => {
          type: 'solid',
          density: 1
      },
-     wax:{
-        color:'#ECE2CE',
-        type: 'liquid',
-        density: 1,
-        wflammable: 'true'
-     },
-     wfire: {
-            colors: ['#FF4500', '#FF8C00'],
+     laser:{
+            colors: ['#F2C304', '#EE7F37'],
             type: 'gas',
-            density: 0,
+            density: 100142,
             unsafe: true
-                
         },
-        fuse:{
-            color: '#39322C',
-            type: 'solid',
-            density: 0.5,
-            wflammable: true
-        },
-        gallium:{
-            color: '#595552',
-            type: 'solid',
-            density: 0.8,
-           
-        },
-        liquidgallium:{
-            color: '#5F5B59',
-            type: 'solid',
-            density: 0.8
-        },
-        gravel:{
-            color:"#909090",
-            type: "solid",
-            density: 1.4
+        lasersource:{
+            colors: ['#F2C304', '#EE7F37'],
+            type: 'gas',
+            density: 100142,
+            unsafe: true
         },
         diamond:{
             initialColor:"#67D3CA",
@@ -861,31 +833,20 @@ canvas.addEventListener('wheel', (e) => {
             density: 0,
             unsafe: true
         },
-       
-        laser:{
-            colors: ['#F2C304', '#EE7F37'],
-            type: 'gas',
-            density: 100142,
-            unsafe: true
-        },
-        lasersource:{
-            colors: ['#F2C304', '#EE7F37'],
-            type: 'gas',
-            density: 100142,
-            unsafe: true
-        },
-        nuke:{
-            color:'#165900',
+        gallium:{
+            color: '#595552',
             type: 'solid',
-            density: 3,
-            unsafe: true
+            density: 0.8,
+           
+        },
+        liquidgallium:{
+            color: '#5F5B59',
+            type: 'solid',
+            density: 0.8
         }
-        
-    
-    
            
         };
-             const humanMovementDelay = 25; // Delay in frames before human can move again
+                  const humanMovementDelay = 25; // Delay in frames before human can move again
        function handleHumanMovement(cell, row, col) {
     if (!cell.delay) cell.delay = 0; // Initialize delay counter if not defined
 
@@ -1052,124 +1013,119 @@ canvas.addEventListener('wheel', (e) => {
      const waterColorChangeDelay = 1000; // delay in milliseconds for each lava cell
      const sandColorChangeDelay = 5000; // delay in milliseconds for each lava cell
      const virusColorChangeDelay = 5000; // delay in milliseconds for each lava cell
-       function drawGrid() {
-        
-           ctx.clearRect(0, 0, width, height);
-           for (let row = 0; row < rows; row++) {
-               for (let col = 0; col < cols; col++) {
-                   const cell = grid[row][col];
-                   const element = cell.element;
-                   ctx.fillRect(col * voxelSize, row * voxelSize, voxelSize, voxelSize);
-                   if (element === 'uranium') {
-    ctx.fillStyle = cell.uraniumColor;
+     function drawGrid() {
+         
+         ctx.clearRect(0, 0, width, height);
+         for (let row = 0; row < rows; row++) {
+             for (let col = 0; col < cols; col++) {
+                 const cell = grid[row][col];
+                 const element = cell.element;
+                 ctx.fillRect(col * voxelSize, row * voxelSize, voxelSize, voxelSize);
+                 if (element === 'uranium') {
+  ctx.fillStyle = cell.uraniumColor;
 }
 
 else    if (element === 'grass') {
-    ctx.fillStyle = cell.grassColor || elements.grass.initialColor; // Use the stored stone color or initial color
-            } else   if (element === 'diamond') {
-     ctx.fillStyle = cell.diamondColor || elements.diamond.initialColor; // Use the stored stone color or initial color
-             } else if (element === 'wood') {
-    ctx.fillStyle = cell.woodColor || elements.wood.initialColor; // Use the stored stone color or initial color
-            } else if (element === 'stone') {
-                ctx.fillStyle = cell.stoneColor || elements.stone.initialColor; // Use the stored stone color or initial color
-            } else if (element === 'moss') {
-     ctx.fillStyle = cell.mossColor || elements.moss.initialColor; // Use the stored stone color or initial color
-             } else if (element === 'basalt') {
-                ctx.fillStyle = cell.basaltColor || elements.basalt.initialColor; // Use the stored stone color or initial color
-            } else if (element === 'obsidian') {
-                ctx.fillStyle = cell.obsidianColor || elements.obsidian.initialColor; // Use the stored stone color or initial color
-            } else if (element === 'fire') {
-                       const fireColors = elements.fire.colors;
-                       ctx.fillStyle = fireColors[Math.floor(Math.random() * fireColors.length)];
+  ctx.fillStyle = cell.grassColor || elements.grass.initialColor; // Use the stored stone color or initial color
+          } else   if (element === 'diamond') {
+  ctx.fillStyle = cell.diamondColor || elements.diamond.initialColor; // Use the stored stone color or initial color
+          } else if (element === 'moss') {
+  ctx.fillStyle = cell.mossColor || elements.moss.initialColor; // Use the stored stone color or initial color
+          } else if (element === 'wood') {
+  ctx.fillStyle = cell.woodColor || elements.wood.initialColor; // Use the stored stone color or initial color
+          } else if (element === 'stone') {
+              ctx.fillStyle = cell.stoneColor || elements.stone.initialColor; // Use the stored stone color or initial color
+          } else if (element === 'basalt') {
+              ctx.fillStyle = cell.basaltColor || elements.basalt.initialColor; // Use the stored stone color or initial color
+          } else if (element === 'obsidian') {
+              ctx.fillStyle = cell.obsidianColor || elements.obsidian.initialColor; // Use the stored stone color or initial color
+          } else if (element === 'fire') {
+                     const fireColors = elements.fire.colors;
+                     ctx.fillStyle = fireColors[Math.floor(Math.random() * fireColors.length)];
 
 
-                   }   else if (element === 'wfire') {
-                        const wfireColors = elements.wfire.colors;
-                        ctx.fillStyle = wfireColors[Math.floor(Math.random() * wfireColors.length)];
- 
- 
-                    } else if (element === 'laser') {
-                        const laserColors = elements.laser.colors;
-                        ctx.fillStyle = laserColors[Math.floor(Math.random() * laserColors.length)];
- 
- 
-                    } else if (element === 'lasersource') {
-                        const lasersourceColors = elements.lasersource.colors;
-                        ctx.fillStyle = lasersourceColors[Math.floor(Math.random() * lasersourceColors.length)];
- 
- 
-                    } else if (element === 'glitch') {
-        ctx.fillStyle = elements.glitch.getColor(); // Get random color for glitch
-    }
- else if (element === 'moltensand') {
-                       const sandColors = elements.moltensand.colors;
-                       ctx.fillStyle = sandColors[Math.floor(Math.random() * sandColors.length)];
+                 }  else if (element === 'laser') {
+                     const laserColors = elements.laser.colors;
+                     ctx.fillStyle = laserColors[Math.floor(Math.random() * laserColors.length)];
+
+
+                 } else if (element === 'lasersource') {
+                     const lasersourceColors = elements.lasersource.colors;
+                     ctx.fillStyle = lasersourceColors[Math.floor(Math.random() * lasersourceColors.length)];
+
+
+                 } else if (element === 'glitch') {
+      ctx.fillStyle = elements.glitch.getColor(); // Get random color for glitch
+  }
+else if (element === 'moltensand') {
+                     const sandColors = elements.moltensand.colors;
+                     ctx.fillStyle = sandColors[Math.floor(Math.random() * sandColors.length)];
+                   
+
+                 }else if (element === 'water') {
+                     const waterColors = elements.water.colors;
+                     ctx.fillStyle = waterColors[Math.floor(Math.random() * waterColors.length)];
+                    
+
+                 } else if (element === 'lava') {
+                     const now = Date.now(); // current time
+                     initializeLavaCell(cell); // Initialize if it's a new lava cell
                      
 
-                   }else if (element === 'water') {
-                       const waterColors = elements.water.colors;
-                       ctx.fillStyle = waterColors[Math.floor(Math.random() * waterColors.length)];
-                      
-
-                   } else if (element === 'lava') {
-                       const now = Date.now(); // current time
-                       initializeLavaCell(cell); // Initialize if it's a new lava cell
-                       
-
-                       // Check if the delay has passed for this cell
-                       if (now - cell.lastColorChange > lavaColorChangeDelay) {
-                           const lavaColors = elements.lava.colors;
-                           cell.currentColor = lavaColors[Math.floor(Math.random() * lavaColors.length)];
-                           cell.lastColorChange = now; // update the last color change time
-                          
-                       }
-                       ctx.fillStyle = cell.currentColor; // set the current lava color
+                     // Check if the delay has passed for this cell
+                     if (now - cell.lastColorChange > lavaColorChangeDelay) {
+                         const lavaColors = elements.lava.colors;
+                         cell.currentColor = lavaColors[Math.floor(Math.random() * lavaColors.length)];
+                         cell.lastColorChange = now; // update the last color change time
+                        
+                     }
+                     ctx.fillStyle = cell.currentColor; // set the current lava color
 
 
-                   }else if (element === 'virus') {
-                       const now = Date.now(); // current time
-                       initializevirusCell(cell); // Initialize if it's a new lava cell
-                       
+                 }else if (element === 'virus') {
+                     const now = Date.now(); // current time
+                     initializevirusCell(cell); // Initialize if it's a new lava cell
+                     
 
-                       // Check if the delay has passed for this cell
-                       if (now - cell.lastColorChange > virusColorChangeDelay) {
-                           const virusColors = elements.virus.colors;
-                           cell.currentColor = virusColors[Math.floor(Math.random() * virusColors.length)];
-                           cell.lastColorChange = now; // update the last color change time
-                          
-                       }
-                       ctx.fillStyle = cell.currentColor; // set the current lava color
-
-
-                   } else if (element === 'magma') {
-                       const now = Date.now(); // current time
-                       initializemagmaCell(cell); // Initialize if it's a new lava cell
+                     // Check if the delay has passed for this cell
+                     if (now - cell.lastColorChange > virusColorChangeDelay) {
+                         const virusColors = elements.virus.colors;
+                         cell.currentColor = virusColors[Math.floor(Math.random() * virusColors.length)];
+                         cell.lastColorChange = now; // update the last color change time
+                        
+                     }
+                     ctx.fillStyle = cell.currentColor; // set the current lava color
 
 
-                       // Check if the delay has passed for this cell
-                       if (now - cell.lastColorChange > magmaColorChangeDelay) {
-                           const magmaColors = elements.magma.colors;
-                           cell.currentColor = magmaColors[Math.floor(Math.random() * magmaColors.length)];
-                           cell.lastColorChange = now; // update the last color change time
-                          
-                       } 
-                       ctx.fillStyle = cell.currentColor; // set the current lava color
-                   } else {
-                       ctx.fillStyle = elements[element].color;
-                   }
+                 } else if (element === 'magma') {
+                     const now = Date.now(); // current time
+                     initializemagmaCell(cell); // Initialize if it's a new lava cell
 
 
-                   if (showVoxels) {
-                       ctx.strokeStyle = 'black';
-                       ctx.strokeRect(col * voxelSize, row * voxelSize, voxelSize, voxelSize);
-                   }
-               }
-           }
-            
-       }
-       const blackHoleRadius = 10; // Define the radius of influence for the black hole
+                     // Check if the delay has passed for this cell
+                     if (now - cell.lastColorChange > magmaColorChangeDelay) {
+                         const magmaColors = elements.magma.colors;
+                         cell.currentColor = magmaColors[Math.floor(Math.random() * magmaColors.length)];
+                         cell.lastColorChange = now; // update the last color change time
+                        
+                     } 
+                     ctx.fillStyle = cell.currentColor; // set the current lava color
+                 } else {
+                     ctx.fillStyle = elements[element].color;
+                 }
+
+
+                 if (showVoxels) {
+                     ctx.strokeStyle = 'black';
+                     ctx.strokeRect(col * voxelSize, row * voxelSize, voxelSize, voxelSize);
+                 }
+             }
+         }
+          
+     }
+  const blackHoleRadius = 10; // Define the radius of influence for the black hole
 const pullSpeed = 0.01; // Speed at which elements are pulled towards the black hole
-
+ 
 function updateGrid() {
          
          for (let row = rows - 1; row >= 0; row--) {
@@ -1721,85 +1677,6 @@ function updateGrid() {
      
 
   }}
-  if (cell.element === 'wax') {
-  // Check if steam is directly below the water
-  if (row < rows - 1 && grid[row + 1][col].element === 'smoke') {
-      // Swap water with steam
-      let smokeCell = grid[row + 1][col];
-
-      // Swap the elements
-      grid[row][col].element = 'smoke';
-      grid[row + 1][col].element = 'wax';
-
-     
-
-  }}
-  if (cell.element === 'gravel') {
-  // Check if steam is directly below the water
-  if (row < rows - 1 && grid[row + 1][col].element === 'smoke') {
-      // Swap water with steam
-      let smokeCell = grid[row + 1][col];
-
-      // Swap the elements
-      grid[row][col].element = 'smoke';
-      grid[row + 1][col].element = 'gravel';
-
-     
-
-  }}
-  if (cell.element === 'gravel') {
-  // Check if steam is directly below the water
-  if (row < rows - 1 && grid[row + 1][col].element === 'steam') {
-      // Swap water with steam
-      let steamCell = grid[row + 1][col];
-
-      // Swap the elements
-      grid[row][col].element = 'steam';
-      grid[row + 1][col].element = 'gravel';
-
-     
-
-  }}
-  if (cell.element === 'gravel') {
-  // Check if steam is directly below the water
-  if (row < rows - 1 && grid[row + 1][col].element === 'water') {
-      // Swap water with steam
-      let waterCell = grid[row + 1][col];
-
-      // Swap the elements
-      grid[row][col].element = 'water';
-      grid[row + 1][col].element = 'gravel';
-
-     
-
-  }}
-  if (cell.element === 'wax') {
-  // Check if steam is directly below the water
-  if (row < rows - 1 && grid[row + 1][col].element === 'steam') {
-      // Swap water with steam
-      let steamCell = grid[row + 1][col];
-
-      // Swap the elements
-      grid[row][col].element = 'steam';
-      grid[row + 1][col].element = 'wax';
-
-     
-
-  }}
-  if (cell.element === 'wax') {
-  // Check if steam is directly below the water
-  if (row < rows - 1 && grid[row + 1][col].element === 'water') {
-      // Swap water with steam
-      let waterCell = grid[row + 1][col];
-
-      // Swap the elements
-      grid[row][col].element = 'water';
-      grid[row + 1][col].element = 'wax';
-
-     
-
-  }}
-
   if (cell.element === 'sand') {
   // Check if steam is directly below the water
   if (row < rows - 1 && grid[row + 1][col].element === 'smoke') {
@@ -1813,47 +1690,6 @@ function updateGrid() {
     
 
   }}
-
-  if (cell.element === 'fire') {
-  // Check if steam is directly below the water
-  if (row < rows - 1 && grid[row - 1][col].element === 'dirt') {
-      // Swap water with steam
-      let dCell = grid[row - 1][col];
-
-      // Swap the elements
-      grid[row][col].element = 'dirt';
-      grid[row - 1][col].element = 'empty';
-
-    
-
-  }}
-  if (cell.element === 'fire') {
-  // Check if steam is directly below the water
-  if (row < rows - 1 && grid[row - 1][col].element === 'lava') {
-      // Swap water with steam
-      let laCell = grid[row - 1][col];
-
-      // Swap the elements
-      grid[row][col].element = 'lava';
-      grid[row - 1][col].element = 'empty';
-
-    
-
-  }}
-  if (cell.element === 'fire') {
-  // Check if steam is directly below the water
-  if (row < rows - 1 && grid[row - 1][col].element === 'mercury') {
-      // Swap water with steam
-      let mcCell = grid[row - 1][col];
-
-      // Swap the elements
-      grid[row][col].element = 'mercury';
-      grid[row - 1][col].element = 'empty';
-
-    
-
-  }}
-
   if (cell.element === 'dirt') {
   // Check if steam is directly below the water
   if (row < rows - 1 && grid[row + 1][col].element === 'smoke') {
@@ -2208,32 +2044,6 @@ function updateGrid() {
               cell.element = randomElement;
               cell.age = 0; // Reset age when replaced
           }
-          if(cell.element==='laser'){
-           cell.age++;
-                if(cell.age >= 0){
-                     cell.element='empty';
-                }
-             } 
-             if(cell.element==='lasersource'){
-           cell.age++;
-                if(cell.age >= 2){
-                     cell.element='empty';
-                }
-             } 
-          
-          
-          if (cell.element === 'lasersource') {
-             // Change the entire column below to laser
-             for (let r = row + 1; r < rows; r++) {
-                 if (grid[r][col].element === 'empty' || grid[r][col].element === 'laser') {
-                     grid[r][col].element = 'laser'; // Change to laser
-                     grid[r][col].age = 0;
-                 } else {
-                     break; // Stop if we hit a non-empty cell
-                 }
-             }
-         }
-                
   if (cell.element === 'grass'){
       const adjacentCells = [{
                              row: row - 1,
@@ -2349,79 +2159,6 @@ function updateGrid() {
                      }
 
   }
-  if (cell.element === 'moss'){
-      const adjacentCells = [{
-                             row: row - 1,
-                             col: col
-                         }, // Up
-                         {
-                             row: row + 1,
-                             col: col
-                         }, // Down
-                         {
-                             row: row,
-                             col: col - 1
-                         }, // Left
-                         {
-                             row: row,
-                             col: col + 1
-                         } // Right
-                     ];
-
-                     // Check for adjacent grass cells
-                     let  mAdjacent = adjacentCells.some(({
-                             row: r,
-                             col: c
-                         }) =>
-                         grid[r] && grid[r][c] && grid[r][c].element === 'virus'
-                     );
-
-
-
-
-
-
-
-
-                     // If water is adjacent to grass, start or increment the delay
-                     if (mAdjacent) {
-                         cell.delay++;
-
-
-
-
-
-
-
-
-                         // Replace water with grass after delay of 30 frames
-                         if (cell.delay >= 27) {
-                          if (Math.random() < 0.8) {
-                             cell.element = 'virus';
-                          }
-                         }
-                     } else {
-                         // Reset delay if not adjacent to grass
-                         cell.delay = 0;
-                     }
-
-  }
-  if(cell.element==='nuke'&& row < rows - 1){
-     if( grid[row] && grid[row][col] && grid[row+1][col].element !== 'empty' && grid[row+1][col].element !== 'nuke' && grid[row+1][col].element !== 'fire' && grid[row+1][col].element !== 'steam' && grid[row+1][col].element !== 'smoke' && grid[row+1][col].element !== 'ash'){
-         cell.element='UExplosion';
-         
-     } else{
-         grid[row+1][col].element = 'nuke';
-         cell.element='empty';
-     }
-
-
-  }
-  if(cell.element==='nuke'){
-     if(row = rows - 1){
-         cell.element='UExplosion';
-     }
-  }
   if (cell.element === 'steel'){
       const adjacentCells = [{
                              row: row - 1,
@@ -2476,7 +2213,6 @@ function updateGrid() {
                      } 
 
   }
- 
   if(cell.element==='copper'){
       cell.age++;
       if(cell.age>500){
@@ -2625,1804 +2361,6 @@ function updateGrid() {
                      }
 
   }
-  if(cell.element==='stone'){
-     const adjacentCells = [{
-                             row: row - 1,
-                             col: col
-                         }, // Up
-                         {
-                             row: row + 1,
-                             col: col
-                         }, // Down
-                         {
-                             row: row,
-                             col: col - 1
-                         }, // Left
-                         {
-                             row: row,
-                             col: col + 1
-                         } // Right
-                     ];
-
-                     // Check for adjacent grass cells
-                     let lrAdjacent = adjacentCells.some(({
-                             row: r,
-                             col: c
-                         }) =>
-                         grid[r] && grid[r][c] && grid[r][c].element === 'laser'
-                     );
-
-
-
-
-
-
-
-
-                     // If water is adjacent to grass, start or increment the delay
-                     if (lrAdjacent) {
-                         cell.delay++;
-
-
-
-
-
-
-
-
-                         // Replace water with grass after delay of 30 frames
-                         if (cell.delay >= 1) {
-                             cell.element = 'lava';
-                            
-                         }
-                     } 
-
-  
-  }
-  if(cell.element==='fire'){
-     const adjacentCells = [{
-                             row: row - 1,
-                             col: col
-                         }, // Up
-                         {
-                             row: row + 1,
-                             col: col
-                         }, // Down
-                         {
-                             row: row,
-                             col: col - 1
-                         }, // Left
-                         {
-                             row: row,
-                             col: col + 1
-                         } // Right
-                     ];
-
-                     // Check for adjacent grass cells
-                     let lfireAdjacent = adjacentCells.some(({
-                             row: r,
-                             col: c
-                         }) =>
-                         grid[r] && grid[r][c] && grid[r][c].element === 'laser'
-                     );
-
-
-
-
-
-
-
-
-                     // If water is adjacent to grass, start or increment the delay
-                     if (lfireAdjacent) {
-                         cell.delay++;
-
-
-
-
-
-
-
-
-                         // Replace water with grass after delay of 30 frames
-                         if (cell.delay >= 0) {
-                             cell.element = 'empty';
-                            
-                         }
-                     }
-
-  
-  }
-  if(cell.element==='mud'){
-     const adjacentCells = [{
-                             row: row - 1,
-                             col: col
-                         }, // Up
-                         {
-                             row: row + 1,
-                             col: col
-                         }, // Down
-                         {
-                             row: row,
-                             col: col - 1
-                         }, // Left
-                         {
-                             row: row,
-                             col: col + 1
-                         } // Right
-                     ];
-
-                     // Check for adjacent grass cells
-                     let lmAdjacent = adjacentCells.some(({
-                             row: r,
-                             col: c
-                         }) =>
-                         grid[r] && grid[r][c] && grid[r][c].element === 'laser'
-                     );
-
-
-
-
-
-
-
-
-                     // If water is adjacent to grass, start or increment the delay
-                     if (lmAdjacent) {
-                         cell.delay++;
-
-
-
-
-
-
-
-
-                         // Replace water with grass after delay of 30 frames
-                         if (cell.delay >= 2) {
-                             cell.element = 'empty';
-                            
-                         }
-                     } 
-  
-  }
-
-  if(elements[grid[row][col].element].flammable){
-     const adjacentCells = [{
-                             row: row - 1,
-                             col: col
-                         }, // Up
-                         {
-                             row: row + 1,
-                             col: col
-                         }, // Down
-                         {
-                             row: row,
-                             col: col - 1
-                         }, // Left
-                         {
-                             row: row,
-                             col: col + 1
-                         } // Right
-                     ];
-
-                     // Check for adjacent grass cells
-                     let lfameAdjacent = adjacentCells.some(({
-                             row: r,
-                             col: c
-                         }) =>
-                         grid[r] && grid[r][c] && grid[r][c].element === 'laser'
-                     );
-
-
-
-
-
-
-
-
-                     // If water is adjacent to grass, start or increment the delay
-                     if (lfameAdjacent) {
-                         cell.delay++;
-
-
-
-
-
-
-
-
-                         // Replace water with grass after delay of 30 frames
-                         if (cell.delay >= 1) {
-                             cell.element = 'fire';
-                            
-                         }
-                     } 
-
-  
-  }
-
-  if(elements[grid[row][col].element].wflammable){
-     const adjacentCells = [{
-                             row: row - 1,
-                             col: col
-                         }, // Up
-                         {
-                             row: row + 1,
-                             col: col
-                         }, // Down
-                         {
-                             row: row,
-                             col: col - 1
-                         }, // Left
-                         {
-                             row: row,
-                             col: col + 1
-                         } // Right
-                     ];
-
-                     // Check for adjacent grass cells
-                     let lWfameAdjacent = adjacentCells.some(({
-                             row: r,
-                             col: c
-                         }) =>
-                         grid[r] && grid[r][c] && grid[r][c].element === 'laser'
-                     );
-
-
-
-
-
-
-
-
-                     // If water is adjacent to grass, start or increment the delay
-                     if (lWfameAdjacent) {
-                         cell.delay++;
-
-
-
-
-
-
-
-
-                         // Replace water with grass after delay of 30 frames
-                         if (cell.delay >= 1) {
-                             cell.element = 'wfire';
-                            
-                         }
-                     } 
-
-  
-  }
-  if(cell.element==='lava'){
-     const adjacentCells = [{
-                             row: row - 1,
-                             col: col
-                         } // Up
-                        
-                     ];
-
-                     // Check for adjacent grass cells
-                     let llAdjacent = adjacentCells.some(({
-                             row: r,
-                             col: c
-                         }) =>
-                         grid[r] && grid[r][c] && grid[r][c].element === 'laser'
-                     );
-
-
-
-
-
-
-
-
-                     // If water is adjacent to grass, start or increment the delay
-                     if (llAdjacent) {
-                         cell.delay++;
-
-
-
-
-
-
-
-
-                         // Replace water with grass after delay of 30 frames
-                         if (cell.delay >= 3) {
-                             cell.element = 'empty';
-                            
-                         }
-                     } 
-
-  
-  }
-  if(cell.element==='sand'){
-     const adjacentCells = [{
-                             row: row - 1,
-                             col: col
-                         }, // Up
-                         {
-                             row: row + 1,
-                             col: col
-                         }, // Down
-                         {
-                             row: row,
-                             col: col - 1
-                         }, // Left
-                         {
-                             row: row,
-                             col: col + 1
-                         } // Right
-                     ];
-
-                     // Check for adjacent grass cells
-                     let lsaAdjacent = adjacentCells.some(({
-                             row: r,
-                             col: c
-                         }) =>
-                         grid[r] && grid[r][c] && grid[r][c].element === 'laser'
-                     );
-
-
-
-
-
-
-
-
-                     // If water is adjacent to grass, start or increment the delay
-                     if (lsaAdjacent) {
-                         cell.delay++;
-
-
-
-
-
-
-
-
-                         // Replace water with grass after delay of 30 frames
-                         if (cell.delay >= 1) {
-                             cell.element = 'moltensand';
-                            
-                         }
-                     } 
-
-  
-  }
-  if(cell.element==='moltensand'){
-     const adjacentCells = [{
-                             row: row - 1,
-                             col: col
-                         }
-                     ];
-
-                     // Check for adjacent grass cells
-                     let lmsAdjacent = adjacentCells.some(({
-                             row: r,
-                             col: c
-                         }) =>
-                         grid[r] && grid[r][c] && grid[r][c].element === 'laser'
-                     );
-
-
-
-
-
-
-
-
-                     // If water is adjacent to grass, start or increment the delay
-                     if (lmsAdjacent) {
-                         cell.delay++;
-
-
-
-
-
-
-
-
-                         // Replace water with grass after delay of 30 frames
-                         if (cell.delay >= 6) {
-                             cell.element = 'empty';
-                            
-                         }
-                   
-                     }
-
-  
-  }
-  if(cell.element==='glass'){
-     const adjacentCells = [{
-                             row: row - 1,
-                             col: col
-                         }, // Up
-                         {
-                             row: row + 1,
-                             col: col
-                         }, // Down
-                         {
-                             row: row,
-                             col: col - 1
-                         }, // Left
-                         {
-                             row: row,
-                             col: col + 1
-                         } // Right
-                     ];
-
-                     // Check for adjacent grass cells
-                     let lglAdjacent = adjacentCells.some(({
-                             row: r,
-                             col: c
-                         }) =>
-                         grid[r] && grid[r][c] && grid[r][c].element === 'laser'
-                     );
-
-
-
-
-
-
-
-
-                     // If water is adjacent to grass, start or increment the delay
-                     if (lglAdjacent) {
-                         cell.delay++;
-
-
-
-
-
-
-
-
-                         // Replace water with grass after delay of 30 frames
-                         if (cell.delay >= 1) {
-                             cell.element = 'moltensand';
-                            
-                         }
-                     } 
-
-                 }
-                 if(cell.element==='ice'){
-     const adjacentCells = [{
-                             row: row - 1,
-                             col: col
-                         }, // Up
-                         {
-                             row: row + 1,
-                             col: col
-                         }, // Down
-                         {
-                             row: row,
-                             col: col - 1
-                         }, // Left
-                         {
-                             row: row,
-                             col: col + 1
-                         } // Right
-                     ];
-
-                     // Check for adjacent grass cells
-                     let liAdjacent = adjacentCells.some(({
-                             row: r,
-                             col: c
-                         }) =>
-                         grid[r] && grid[r][c] && grid[r][c].element === 'laser'
-                     );
-
-
-
-
-
-
-
-
-                     // If water is adjacent to grass, start or increment the delay
-                     if (liAdjacent) {
-                         cell.delay++;
-
-
-
-
-
-
-
-
-                         // Replace water with grass after delay of 30 frames
-                         if (cell.delay >= 1) {
-                             cell.element = 'water';
-                            
-                         }
-                     } 
-
-                 }
-                 if(cell.element==='water'){
-     const adjacentCells = [{
-                             row: row - 1,
-                             col: col
-                         }
-                     ];
-
-                     // Check for adjacent grass cells
-                     let lwaAdjacent = adjacentCells.some(({
-                             row: r,
-                             col: c
-                         }) =>
-                         grid[r] && grid[r][c] && grid[r][c].element === 'laser'
-                     );
-
-
-
-
-
-
-
-
-                     // If water is adjacent to grass, start or increment the delay
-                     if (lwaAdjacent) {
-                         cell.delay++;
-
-
-
-
-
-
-
-
-                         // Replace water with grass after delay of 30 frames
-                         if (cell.delay >= 1) {
-                             cell.element = 'steam';
-                            
-                         }
-                     } 
-
-                 }
-                 if(cell.element==='snow'){
-     const adjacentCells = [{
-                             row: row - 1,
-                             col: col
-                         }, // Up
-                         {
-                             row: row + 1,
-                             col: col
-                         }, // Down
-                         {
-                             row: row,
-                             col: col - 1
-                         }, // Left
-                         {
-                             row: row,
-                             col: col + 1
-                         } // Right
-                     ];
-
-                     // Check for adjacent grass cells
-                     let lsnowAdjacent = adjacentCells.some(({
-                             row: r,
-                             col: c
-                         }) =>
-                         grid[r] && grid[r][c] && grid[r][c].element === 'laser'
-                     );
-
-
-
-
-
-
-
-
-                     // If water is adjacent to grass, start or increment the delay
-                     if (lsnowAdjacent) {
-                         cell.delay++;
-
-
-
-
-
-
-
-
-                         // Replace water with grass after delay of 30 frames
-                         if (cell.delay >= 1) {
-                             cell.element = 'water';
-                            
-                         }
-                     } 
-
-                 }
-                 if(cell.element==='sugar'){
-     const adjacentCells = [{
-                             row: row - 1,
-                             col: col
-                         }, // Up
-                         {
-                             row: row + 1,
-                             col: col
-                         }, // Down
-                         {
-                             row: row,
-                             col: col - 1
-                         }, // Left
-                         {
-                             row: row,
-                             col: col + 1
-                         } // Right
-                     ];
-
-                     // Check for adjacent grass cells
-                     let lsuAdjacent = adjacentCells.some(({
-                             row: r,
-                             col: c
-                         }) =>
-                         grid[r] && grid[r][c] && grid[r][c].element === 'laser'
-                     );
-
-
-
-
-
-
-
-
-                     // If water is adjacent to grass, start or increment the delay
-                     if (lsuAdjacent) {
-                         cell.delay++;
-
-
-
-
-
-
-
-
-                         // Replace water with grass after delay of 30 frames
-                         if (cell.delay >= 5) {
-                             cell.element = 'empty';
-                            
-                         }
-                     } 
-
-                 }
-                 if(cell.element==='magma'){
-     const adjacentCells = [{
-                             row: row - 1,
-                             col: col
-                         }, // Up
-                         {
-                             row: row + 1,
-                             col: col
-                         }, // Down
-                         {
-                             row: row,
-                             col: col - 1
-                         }, // Left
-                         {
-                             row: row,
-                             col: col + 1
-                         } // Right
-                     ];
-
-                     // Check for adjacent grass cells
-                     let lmaAdjacent = adjacentCells.some(({
-                             row: r,
-                             col: c
-                         }) =>
-                         grid[r] && grid[r][c] && grid[r][c].element === 'laser'
-                     );
-
-
-
-
-
-
-
-
-                     // If water is adjacent to grass, start or increment the delay
-                     if (lmaAdjacent) {
-                         cell.delay++;
-
-
-
-
-
-
-
-
-                         // Replace water with grass after delay of 30 frames
-                         if (cell.delay >= 2) {
-                             cell.element = 'empty';
-                            
-                         }
-                     } 
-
-                 }
-                 if(cell.element==='obsidian'){
-     const adjacentCells = [{
-                             row: row - 1,
-                             col: col
-                         }, // Up
-                         {
-                             row: row + 1,
-                             col: col
-                         }, // Down
-                         {
-                             row: row,
-                             col: col - 1
-                         }, // Left
-                         {
-                             row: row,
-                             col: col + 1
-                         } // Right
-                     ];
-
-                     // Check for adjacent grass cells
-                     let loAdjacent = adjacentCells.some(({
-                             row: r,
-                             col: c
-                         }) =>
-                         grid[r] && grid[r][c] && grid[r][c].element === 'laser'
-                     );
-
-
-
-
-
-
-
-
-                     // If water is adjacent to grass, start or increment the delay
-                     if (loAdjacent) {
-                         cell.delay++;
-
-
-
-
-
-
-
-
-                         // Replace water with grass after delay of 30 frames
-                         if (cell.delay >= 1) {
-                             cell.element = 'magma';
-                            
-                         }
-                     } 
-
-                 }
-                 if(cell.element==='dirt'){
-     const adjacentCells = [{
-                             row: row - 1,
-                             col: col
-                         }, // Up
-                         {
-                             row: row + 1,
-                             col: col
-                         }, // Down
-                         {
-                             row: row,
-                             col: col - 1
-                         }, // Left
-                         {
-                             row: row,
-                             col: col + 1
-                         } // Right
-                     ];
-
-                     // Check for adjacent grass cells
-                     let ldAdjacent = adjacentCells.some(({
-                             row: r,
-                             col: c
-                         }) =>
-                         grid[r] && grid[r][c] && grid[r][c].element === 'laser'
-                     );
-
-
-
-
-
-
-
-
-                     // If water is adjacent to grass, start or increment the delay
-                     if (ldAdjacent) {
-                         cell.delay++;
-
-
-
-
-
-
-
-
-                         // Replace water with grass after delay of 30 frames
-                         if (cell.delay >= 2) {
-                             cell.element = 'magma';
-                            
-                         }
-                     } 
-
-                 }
-                 if(cell.element==='concrete'){
-     const adjacentCells = [{
-                             row: row - 1,
-                             col: col
-                         }, // Up
-                         {
-                             row: row + 1,
-                             col: col
-                         }, // Down
-                         {
-                             row: row,
-                             col: col - 1
-                         }, // Left
-                         {
-                             row: row,
-                             col: col + 1
-                         } // Right
-                     ];
-
-                     // Check for adjacent grass cells
-                     let lcAdjacent = adjacentCells.some(({
-                             row: r,
-                             col: c
-                         }) =>
-                         grid[r] && grid[r][c] && grid[r][c].element === 'laser'
-                     );
-
-
-
-
-
-
-
-
-                     // If water is adjacent to grass, start or increment the delay
-                     if (lcAdjacent) {
-                         cell.delay++;
-
-
-
-
-
-
-
-
-                         // Replace water with grass after delay of 30 frames
-                         if (cell.delay >= 1) {
-                             cell.element = 'stone';
-                            
-                         }
-                     } 
-
-                 }
-                 if(cell.element==='syrup'){
-     const adjacentCells = [{
-                             row: row - 1,
-                             col: col
-                         }, // Up
-                         {
-                             row: row + 1,
-                             col: col
-                         }, // Down
-                         {
-                             row: row,
-                             col: col - 1
-                         }, // Left
-                         {
-                             row: row,
-                             col: col + 1
-                         } // Right
-                     ];
-
-                     // Check for adjacent grass cells
-                     let lsyrAdjacent = adjacentCells.some(({
-                             row: r,
-                             col: c
-                         }) =>
-                         grid[r] && grid[r][c] && grid[r][c].element === 'laser'
-                     );
-
-
-
-
-
-
-
-
-                     // If water is adjacent to grass, start or increment the delay
-                     if (lsyrAdjacent) {
-                         cell.age++;
-
-
-
-
-
-
-
-
-                         // Replace water with grass after delay of 30 frames
-                         if (cell.age >= 2) {
-                           
-                        
-                             cell.element = 'steam';
-                             
-                             
-                         }}
-
-                 }
-                 if(cell.element==='crystal'){
-     const adjacentCells = [{
-                             row: row - 1,
-                             col: col
-                         }, // Up
-                         {
-                             row: row + 1,
-                             col: col
-                         }, // Down
-                         {
-                             row: row,
-                             col: col - 1
-                         }, // Left
-                         {
-                             row: row,
-                             col: col + 1
-                         } // Right
-                     ];
-
-                     // Check for adjacent grass cells
-                     let lcrAdjacent = adjacentCells.some(({
-                             row: r,
-                             col: c
-                         }) =>
-                         grid[r] && grid[r][c] && grid[r][c].element === 'laser'
-                     );
-
-
-
-
-
-
-
-
-                     // If water is adjacent to grass, start or increment the delay
-                     if (lcrAdjacent) {
-                         cell.delay++;
-
-
-
-
-
-
-
-
-                         // Replace water with grass after delay of 30 frames
-                         if (cell.delay >= 3) {
-                             cell.element = 'moltensand';
-                            cell.delay=0;
-                         }
-                     } 
-
-                 }
-                 if(cell.element==='basalt'){
-     const adjacentCells = [{
-                             row: row - 1,
-                             col: col
-                         }, // Up
-                         {
-                             row: row + 1,
-                             col: col
-                         }, // Down
-                         {
-                             row: row,
-                             col: col - 1
-                         }, // Left
-                         {
-                             row: row,
-                             col: col + 1
-                         } // Right
-                     ];
-
-                     // Check for adjacent grass cells
-                     let lbaAdjacent = adjacentCells.some(({
-                             row: r,
-                             col: c
-                         }) =>
-                         grid[r] && grid[r][c] && grid[r][c].element === 'laser'
-                     );
-
-
-
-
-
-
-
-
-                     // If water is adjacent to grass, start or increment the delay
-                     if (lbaAdjacent) {
-                         cell.delay++;
-
-
-
-
-
-
-
-
-                         // Replace water with grass after delay of 30 frames
-                         if (cell.delay >= 1) {
-                             cell.element = 'ash';
-                            cell.delay=0;
-                         }
-                     } 
-
-                 }
-                 if(cell.element==='ash'){
-     const adjacentCells = [{
-                             row: row - 1,
-                             col: col
-                         }
-                     ];
-
-                     // Check for adjacent grass cells
-                     let lashAdjacent = adjacentCells.some(({
-                             row: r,
-                             col: c
-                         }) =>
-                         grid[r] && grid[r][c] && grid[r][c].element === 'laser'
-                     );
-
-
-
-
-
-
-
-
-                     // If water is adjacent to grass, start or increment the delay
-                     if (lashAdjacent) {
-                         cell.delay++;
-
-
-
-
-
-
-
-
-                         // Replace water with grass after delay of 30 frames
-                         if (cell.delay >= 1) {
-                             cell.element = 'empty';
-                            
-                         }
-                     } 
-
-                 }
-                 if(cell.element==='fly'){
-     const adjacentCells = [{
-                             row: row - 1,
-                             col: col
-                         }, // Up
-                         {
-                             row: row + 1,
-                             col: col
-                         }, // Down
-                         {
-                             row: row,
-                             col: col - 1
-                         }, // Left
-                         {
-                             row: row,
-                             col: col + 1
-                         } // Right
-                     ];
-
-                     // Check for adjacent grass cells
-                     let lflyAdjacent = adjacentCells.some(({
-                             row: r,
-                             col: c
-                         }) =>
-                         grid[r] && grid[r][c] && grid[r][c].element === 'laser'
-                     );
-
-
-
-
-
-
-
-
-                     // If water is adjacent to grass, start or increment the delay
-                     if (lflyAdjacent) {
-                         cell.delay++;
-
-
-
-
-
-
-
-
-                         // Replace water with grass after delay of 30 frames
-                         if (cell.delay >= 1) {
-                             cell.element = 'empty';
-                            
-                         }
-                     } 
-
-                 }
-                 if(cell.element==='human'){
-     const adjacentCells = [{
-                             row: row - 1,
-                             col: col
-                         }, // Up
-                         {
-                             row: row + 1,
-                             col: col
-                         }, // Down
-                         {
-                             row: row,
-                             col: col - 1
-                         }, // Left
-                         {
-                             row: row,
-                             col: col + 1
-                         } // Right
-                     ];
-
-                     // Check for adjacent grass cells
-                     let lhuAdjacent = adjacentCells.some(({
-                             row: r,
-                             col: c
-                         }) =>
-                         grid[r] && grid[r][c] && grid[r][c].element === 'laser'
-                     );
-
-
-
-
-
-
-
-
-                     // If water is adjacent to grass, start or increment the delay
-                     if (lhuAdjacent) {
-                        cell.age++;
-
-
-
-
-
-
-
-
-                         // Replace water with grass after delay of 30 frames
-                         if(cell.age>=2){
-                             cell.element = 'ash';
-                             cell.age=0;
-                         }
-                         
-                     } 
-
-                 }
-                 if(cell.element==='blackhole'){
-     const adjacentCells = [{
-                             row: row - 1,
-                             col: col
-                         }, // Up
-                         {
-                             row: row + 1,
-                             col: col
-                         }, // Down
-                         {
-                             row: row,
-                             col: col - 1
-                         }, // Left
-                         {
-                             row: row,
-                             col: col + 1
-                         } // Right
-                     ];
-
-                     // Check for adjacent grass cells
-                     let lblAdjacent = adjacentCells.some(({
-                             row: r,
-                             col: c
-                         }) =>
-                         grid[r] && grid[r][c] && grid[r][c].element === 'laser'
-                     );
-
-
-
-
-
-
-
-
-                     // If water is adjacent to grass, start or increment the delay
-                     if (lblAdjacent) {
-                         cell.delay++;
-
-
-
-
-
-
-
-
-                         // Replace water with grass after delay of 30 frames
-                         if (cell.delay >= 20) {
-                             cell.element = 'UExplosion';
-                            
-                         }
-                     } 
-
-                 }
-                 if(cell.element==='liquidN'){
-     const adjacentCells = [{
-                             row: row - 1,
-                             col: col
-                         }, // Up
-                         {
-                             row: row + 1,
-                             col: col
-                         }, // Down
-                         {
-                             row: row,
-                             col: col - 1
-                         }, // Left
-                         {
-                             row: row,
-                             col: col + 1
-                         } // Right
-                     ];
-
-                     // Check for adjacent grass cells
-                     let lnAdjacent = adjacentCells.some(({
-                             row: r,
-                             col: c
-                         }) =>
-                         grid[r] && grid[r][c] && grid[r][c].element === 'laser'
-                     );
-
-
-
-
-
-
-
-
-                     // If water is adjacent to grass, start or increment the delay
-                     if (lnAdjacent) {
-                         cell.delay++;
-
-
-
-
-
-
-
-
-                         // Replace water with grass after delay of 30 frames
-                         if (cell.delay >= 2) {
-                             cell.element = 'ice';
-                            
-                         }
-                     } 
-
-                 }
-                 if(cell.element==='steel'){
-     const adjacentCells = [{
-                             row: row - 1,
-                             col: col
-                         }, // Up
-                         {
-                             row: row + 1,
-                             col: col
-                         }, // Down
-                         {
-                             row: row,
-                             col: col - 1
-                         }, // Left
-                         {
-                             row: row,
-                             col: col + 1
-                         } // Right
-                     ];
-
-                     // Check for adjacent grass cells
-                     let lstAdjacent = adjacentCells.some(({
-                             row: r,
-                             col: c
-                         }) =>
-                         grid[r] && grid[r][c] && grid[r][c].element === 'laser'
-                     );
-
-
-
-
-
-
-
-
-                     // If water is adjacent to grass, start or increment the delay
-                     if (lstAdjacent) {
-                         cell.delay++;
-
-
-
-
-
-
-
-
-                         // Replace water with grass after delay of 30 frames
-                         if (cell.delay >= 3) {
-                             cell.element = 'rust';
-                            
-                         }
-                     } 
-
-                 }
-                 if(cell.element==='rust'){
-     const adjacentCells = [{
-                             row: row - 1,
-                             col: col
-                         }
-                     ];
-
-                     // Check for adjacent grass cells
-                     let lrAdjacent = adjacentCells.some(({
-                             row: r,
-                             col: c
-                         }) =>
-                         grid[r] && grid[r][c] && grid[r][c].element === 'laser'
-                     );
-
-
-
-
-
-
-
-
-                     // If water is adjacent to grass, start or increment the delay
-                     if (lrAdjacent) {
-                         cell.delay++;
-
-
-
-
-
-
-
-
-                         // Replace water with grass after delay of 30 frames
-                         if (cell.delay >= 4) {
-                             cell.element = 'lava';
-                            
-                         }
-                     } 
-
-                 }
-                 if(cell.element==='salt'){
-     const adjacentCells = [{
-                             row: row - 1,
-                             col: col
-                         }, // Up
-                         {
-                             row: row + 1,
-                             col: col
-                         }, // Down
-                         {
-                             row: row,
-                             col: col - 1
-                         }, // Left
-                         {
-                             row: row,
-                             col: col + 1
-                         } // Right
-                     ];
-
-                     // Check for adjacent grass cells
-                     let lsaltAdjacent = adjacentCells.some(({
-                             row: r,
-                             col: c
-                         }) =>
-                         grid[r] && grid[r][c] && grid[r][c].element === 'laser'
-                     );
-
-
-
-
-
-
-
-
-                     // If water is adjacent to grass, start or increment the delay
-                     if (lsaltAdjacent) {
-                         cell.delay++;
-
-
-
-
-
-
-
-
-                         // Replace water with grass after delay of 30 frames
-                         if (cell.delay >= 5) {
-                             cell.element = 'crystal';
-                             cell.delay = 0;
-                            
-                         }
-                     } 
-
-                 }
-                 if(cell.element==='quartz'){
-     const adjacentCells = [{
-                             row: row - 1,
-                             col: col
-                         }, // Up
-                         {
-                             row: row + 1,
-                             col: col
-                         }, // Down
-                         {
-                             row: row,
-                             col: col - 1
-                         }, // Left
-                         {
-                             row: row,
-                             col: col + 1
-                         } // Right
-                     ];
-
-                     // Check for adjacent grass cells
-                     let lqAdjacent = adjacentCells.some(({
-                             row: r,
-                             col: c
-                         }) =>
-                         grid[r] && grid[r][c] && grid[r][c].element === 'laser'
-                     );
-
-
-
-
-
-
-
-
-                     // If water is adjacent to grass, start or increment the delay
-                     if (lqAdjacent) {
-                         cell.delay++;
-
-
-
-
-
-
-
-
-                         // Replace water with grass after delay of 30 frames
-                         if (cell.delay >= 3) {
-                             cell.element = 'lava';
-                            cell.delay= 0;
-                         }
-                     } 
-
-                 }
-                 if(cell.element==='fog'){
-     const adjacentCells = [{
-                             row: row - 1,
-                             col: col
-                         }, // Up
-                         {
-                             row: row + 1,
-                             col: col
-                         }, // Down
-                         {
-                             row: row,
-                             col: col - 1
-                         }, // Left
-                         {
-                             row: row,
-                             col: col + 1
-                         } // Right
-                     ];
-
-                     // Check for adjacent grass cells
-                     let lfogAdjacent = adjacentCells.some(({
-                             row: r,
-                             col: c
-                         }) =>
-                         grid[r] && grid[r][c] && grid[r][c].element === 'laser'
-                     );
-
-
-
-
-
-
-
-
-                     // If water is adjacent to grass, start or increment the delay
-                     if (lfogAdjacent) {
-                         cell.delay++;
-
-
-
-
-
-
-
-
-                         // Replace water with grass after delay of 30 frames
-                         if (cell.delay >= 3) {
-                             cell.element = 'empty';
-                             cell.delay = 0;
-                         }
-                     } 
-
-                 }
-                 if(cell.element==='bone'){
-     const adjacentCells = [{
-                             row: row - 1,
-                             col: col
-                         }, // Up
-                         {
-                             row: row + 1,
-                             col: col
-                         }, // Down
-                         {
-                             row: row,
-                             col: col - 1
-                         }, // Left
-                         {
-                             row: row,
-                             col: col + 1
-                         } // Right
-                     ];
-
-                     // Check for adjacent grass cells
-                     let lboAdjacent = adjacentCells.some(({
-                             row: r,
-                             col: c
-                         }) =>
-                         grid[r] && grid[r][c] && grid[r][c].element === 'laser'
-                     );
-
-
-
-
-
-
-
-
-                     // If water is adjacent to grass, start or increment the delay
-                     if (lboAdjacent) {
-                         cell.delay++;
-
-
-
-
-
-
-
-
-                         // Replace water with grass after delay of 30 frames
-                         if (cell.delay >= 3) {
-                             cell.element = 'stone';
-                            cell.delay=0;
-                         }
-                     } 
-
-                 }
-                 if(cell.element==='plastic'){
-     const adjacentCells = [{
-                             row: row - 1,
-                             col: col
-                         }, // Up
-                         {
-                             row: row + 1,
-                             col: col
-                         }, // Down
-                         {
-                             row: row,
-                             col: col - 1
-                         }, // Left
-                         {
-                             row: row,
-                             col: col + 1
-                         } // Right
-                     ];
-
-                     // Check for adjacent grass cells
-                     let lplAdjacent = adjacentCells.some(({
-                             row: r,
-                             col: c
-                         }) =>
-                         grid[r] && grid[r][c] && grid[r][c].element === 'laser'
-                     );
-
-
-
-
-
-
-
-
-                     // If water is adjacent to grass, start or increment the delay
-                     if (lplAdjacent) {
-                         cell.delay++;
-
-
-
-
-
-
-
-
-                         // Replace water with grass after delay of 30 frames
-                         if (cell.delay >= 3) {
-                             cell.element = 'pwater';
-                            
-                         }
-                     } 
-
-                 }
-                 if(cell.element==='pwater'){
-     const adjacentCells = [{
-                             row: row - 1,
-                             col: col
-                         }
-                     ];
-
-                     // Check for adjacent grass cells
-                     let lpwAdjacent = adjacentCells.some(({
-                             row: r,
-                             col: c
-                         }) =>
-                         grid[r] && grid[r][c] && grid[r][c].element === 'laser'
-                     );
-
-
-
-
-
-
-
-
-                     // If water is adjacent to grass, start or increment the delay
-                     if (lpwAdjacent) {
-                         cell.delay++;
-
-
-
-
-
-
-
-
-                         // Replace water with grass after delay of 30 frames
-                         if (cell.delay >= 7) {
-                             cell.element = 'steam';
-                            
-                         }
-                     } 
-
-                 }
-                 if(cell.element==='copper'){
-     const adjacentCells = [{
-                             row: row - 1,
-                             col: col
-                         }, // Up
-                         {
-                             row: row + 1,
-                             col: col
-                         }, // Down
-                         {
-                             row: row,
-                             col: col - 1
-                         }, // Left
-                         {
-                             row: row,
-                             col: col + 1
-                         } // Right
-                     ];
-
-                     // Check for adjacent grass cells
-                     let lcAdjacent = adjacentCells.some(({
-                             row: r,
-                             col: c
-                         }) =>
-                         grid[r] && grid[r][c] && grid[r][c].element === 'laser'
-                     );
-
-
-
-
-
-
-
-
-                     // If water is adjacent to grass, start or increment the delay
-                     if (lcAdjacent) {
-                         cell.delay++;
-
-
-
-
-
-
-
-
-                         // Replace water with grass after delay of 30 frames
-                         if (cell.delay >= 3) {
-                             cell.element = 'empty';
-                            
-                         }
-                     } 
-
-                 }
-                 if(cell.element==='gravel'){
-     const adjacentCells = [{
-                             row: row - 1,
-                             col: col
-                         }, // Up
-                         {
-                             row: row + 1,
-                             col: col
-                         }, // Down
-                         {
-                             row: row,
-                             col: col - 1
-                         }, // Left
-                         {
-                             row: row,
-                             col: col + 1
-                         } // Right
-                     ];
-
-                     // Check for adjacent grass cells
-                     let lgrAdjacent = adjacentCells.some(({
-                             row: r,
-                             col: c
-                         }) =>
-                         grid[r] && grid[r][c] && grid[r][c].element === 'laser'
-                     );
-
-
-
-
-
-
-
-
-                     // If water is adjacent to grass, start or increment the delay
-                     if (lgrAdjacent) {
-                         cell.delay++;
-
-
-
-
-
-
-
-
-                         // Replace water with grass after delay of 30 frames
-                         if (cell.delay >= 3) {
-                             cell.element = 'magma';
-                            
-                         }
-                     } 
-
-                 }
   if (cell.element === 'gunpowder'){
       const adjacentCells = [{
                              row: row - 1,
@@ -4477,31 +2415,6 @@ function updateGrid() {
                          // Reset delay if not adjacent to grass
                          cell.delay = 0;
                      }
-
-  }
-  if(cell.element==='gallium'){
-     const adjacentCells = [{
-                             row: row - 1,
-                             col: col
-                         }, // Up
-                         
-                        
-                     
-                     ];
-
-                     // Check for adjacent grass cells
-                     let GMAdjacent = adjacentCells.some(({
-                             row: r,
-                             col: c
-                         }) =>
-                         grid[r] && grid[r][c] && grid[r][c].element !== 'empty' && grid[r][c].element !== 'gallium' 
-                     );
-                
-               if(GMAdjacent){
-                
-                 if(cell.delay>=1){
-                 cell.element='liquidgallium';
-               } cell.delay++;} 
 
   }
   if (cell.element === 'ice'){
@@ -4614,6 +2527,2118 @@ function updateGrid() {
 
   }
 
+  if(cell.element==='laser'){
+           cell.age++;
+                if(cell.age >= 0){
+                     cell.element='empty';
+                }
+             } 
+             if(cell.element==='lasersource'){
+           cell.age++;
+                if(cell.age >= 2){
+                     cell.element='empty';
+                }
+             } 
+          
+          
+          if (cell.element === 'lasersource') {
+             // Change the entire column below to laser
+             for (let r = row + 1; r < rows; r++) {
+                 if (grid[r][col].element === 'empty' || grid[r][col].element === 'laser') {
+                     grid[r][col].element = 'laser'; // Change to laser
+                     grid[r][col].age = 0;
+                 } else {
+                     break; // Stop if we hit a non-empty cell
+                 }
+             }
+         }
+         if(cell.element==='stone'){
+             const laseradjacentCells = [{
+                             row: row - 1,
+                             col: col
+                         }, // Up
+                         {
+                             row: row + 1,
+                             col: col
+                         }, // Down
+                         {
+                             row: row,
+                             col: col - 1
+                         }, // Left
+                         {
+                             row: row,
+                             col: col + 1
+                         } // Right
+                     ];
+                     const laserAdjacent = laseradjacentCells.some(({
+                             row: r,
+                             col: c
+                         }) =>
+                         grid[r] && grid[r][c] && grid[r][c].element === 'laser'
+                     );
+
+
+
+
+
+
+
+
+                     // If water is adjacent to grass, start or increment the delay
+                     if (laserAdjacent) {
+                         cell.laserdelay++;
+
+
+
+
+
+
+
+
+                         // Replace water with grass after delay of 30 frames
+                         if (cell.laserdelay >= 2) {
+                         
+                    
+                     
+                             cell.element = 'lava';
+                             cell.laserdelay = 0;
+                         }
+                     }
+         }
+         if(cell.element==='lava'){
+             const laseradjacentCells = [{
+                             row: row - 1,
+                             col: col
+                         }
+                     ];
+                     const laserAdjacent = laseradjacentCells.some(({
+                             row: r,
+                             col: c
+                         }) =>
+                         grid[r] && grid[r][c] && grid[r][c].element === 'laser'
+                     );
+
+
+
+
+
+
+
+
+                     // If water is adjacent to grass, start or increment the delay
+                     if (laserAdjacent) {
+                         cell.laserdelay++;
+
+
+
+
+
+
+
+
+                         // Replace water with grass after delay of 30 frames
+                         if (cell.laserdelay >= 3) {
+                         
+                    
+                     
+                             cell.element = 'empty';
+                             cell.laserdelay = 0;
+                         }
+                     }
+         }
+         if(elements[grid[row][col].element].flammable){
+             const laseradjacentCells = [{
+                             row: row - 1,
+                             col: col
+                         }, // Up
+                         {
+                             row: row + 1,
+                             col: col
+                         }, // Down
+                         {
+                             row: row,
+                             col: col - 1
+                         }, // Left
+                         {
+                             row: row,
+                             col: col + 1
+                         } // Right
+                     ];
+                     const laserAdjacent = laseradjacentCells.some(({
+                             row: r,
+                             col: c
+                         }) =>
+                         grid[r] && grid[r][c] && grid[r][c].element === 'laser'
+                     );
+
+
+
+
+
+
+
+
+                     // If water is adjacent to grass, start or increment the delay
+                     if (laserAdjacent) {
+                         cell.laserdelay++;
+
+
+
+
+
+
+
+
+                         // Replace water with grass after delay of 30 frames
+                         if (cell.laserdelay >= 1) {
+                         
+                    
+                     
+                             cell.element = 'fire';
+                             cell.laserdelay = 0;
+                         }
+                     }
+         }
+         if(cell.element==='fire'){
+             const laseradjacentCells = [{
+                             row: row - 1,
+                             col: col
+                         }
+                     ];
+                     const laserAdjacent = laseradjacentCells.some(({
+                             row: r,
+                             col: c
+                         }) =>
+                         grid[r] && grid[r][c] && grid[r][c].element === 'laser'
+                     );
+
+
+
+
+
+
+
+
+                     // If water is adjacent to grass, start or increment the delay
+                     if (laserAdjacent) {
+                         cell.laserdelay++;
+
+
+
+
+
+
+
+
+                         // Replace water with grass after delay of 30 frames
+                         if (cell.laserdelay >= 1) {
+                         
+                    
+                     
+                             cell.element = 'empty';
+                             cell.laserdelay = 0;
+                         }
+                     }
+         }
+         if(cell.element==='water'){
+             const laseradjacentCells = [{
+                             row: row - 1,
+                             col: col
+                         }, // Up
+                         {
+                             row: row + 1,
+                             col: col
+                         }, // Down
+                         {
+                             row: row,
+                             col: col - 1
+                         }, // Left
+                         {
+                             row: row,
+                             col: col + 1
+                         } // Right
+                     ];
+                     const laserAdjacent = laseradjacentCells.some(({
+                             row: r,
+                             col: c
+                         }) =>
+                         grid[r] && grid[r][c] && grid[r][c].element === 'laser'
+                     );
+
+
+
+
+
+
+
+
+                     // If water is adjacent to grass, start or increment the delay
+                     if (laserAdjacent) {
+                         cell.laserdelay++;
+
+
+
+
+
+
+
+
+                         // Replace water with grass after delay of 30 frames
+                         if (cell.laserdelay >= 2) {
+                         
+                    
+                     
+                             cell.element = 'steam';
+                             cell.laserdelay = 0;
+                         }
+                     }
+         }
+         if(cell.element==='steam'){
+             const laseradjacentCells = [{
+                             row: row - 1,
+                             col: col
+                         }
+                     ];
+                     const laserAdjacent = laseradjacentCells.some(({
+                             row: r,
+                             col: c
+                         }) =>
+                         grid[r] && grid[r][c] && grid[r][c].element === 'laser'
+                     );
+
+
+
+
+
+
+
+
+                     // If water is adjacent to grass, start or increment the delay
+                     if (laserAdjacent) {
+                         cell.laserdelay++;
+
+
+
+
+
+
+
+
+                         // Replace water with grass after delay of 30 frames
+                         if (cell.laserdelay >= 0) {
+                         
+                    
+                     
+                             cell.element = 'empty';
+                             cell.laserdelay = 0;
+                         }
+                     }
+         }
+         if(cell.element==='sand'){
+             const laseradjacentCells = [{
+                             row: row - 1,
+                             col: col
+                         }, // Up
+                         {
+                             row: row + 1,
+                             col: col
+                         }, // Down
+                         {
+                             row: row,
+                             col: col - 1
+                         }, // Left
+                         {
+                             row: row,
+                             col: col + 1
+                         } // Right
+                     ];
+                     const laserAdjacent = laseradjacentCells.some(({
+                             row: r,
+                             col: c
+                         }) =>
+                         grid[r] && grid[r][c] && grid[r][c].element === 'laser'
+                     );
+
+
+
+
+
+
+
+
+                     // If water is adjacent to grass, start or increment the delay
+                     if (laserAdjacent) {
+                         cell.laserdelay++;
+
+
+
+
+
+
+
+
+                         // Replace water with grass after delay of 30 frames
+                         if (cell.laserdelay >= 4) {
+                         
+                    
+                     
+                             cell.element = 'moltensand';
+                             cell.laserdelay = 0;
+                         }
+                     }
+         }
+         if(cell.element==='moltensand'){
+             const laseradjacentCells = [{
+                             row: row - 1,
+                             col: col
+                         }
+                     ];
+                     const laserAdjacent = laseradjacentCells.some(({
+                             row: r,
+                             col: c
+                         }) =>
+                         grid[r] && grid[r][c] && grid[r][c].element === 'laser'
+                     );
+
+
+
+
+
+
+
+
+                     // If water is adjacent to grass, start or increment the delay
+                     if (laserAdjacent) {
+                         cell.laserdelay++;
+
+
+
+
+
+
+
+
+                         // Replace water with grass after delay of 30 frames
+                         if (cell.laserdelay >= 3) {
+                         
+                    
+                     
+                             cell.element = 'empty';
+                             cell.laserdelay = 0;
+                         }
+                     }
+         }
+         if(cell.element==='mud'){
+             const laseradjacentCells = [{
+                             row: row - 1,
+                             col: col
+                         }, // Up
+                         {
+                             row: row + 1,
+                             col: col
+                         }, // Down
+                         {
+                             row: row,
+                             col: col - 1
+                         }, // Left
+                         {
+                             row: row,
+                             col: col + 1
+                         } // Right
+                     ];
+                     const laserAdjacent = laseradjacentCells.some(({
+                             row: r,
+                             col: c
+                         }) =>
+                         grid[r] && grid[r][c] && grid[r][c].element === 'laser'
+                     );
+
+
+
+
+
+
+
+
+                     // If water is adjacent to grass, start or increment the delay
+                     if (laserAdjacent) {
+                         cell.laserdelay++;
+
+
+
+
+
+
+
+
+                         // Replace water with grass after delay of 30 frames
+                         if (cell.laserdelay >= 2) {
+                         
+                    
+                     
+                             cell.element = 'dirt';
+                             cell.laserdelay = 0;
+                         }
+                     }
+         }
+         if(cell.element==='dirt'){
+             const laseradjacentCells = [{
+                             row: row - 1,
+                             col: col
+                         }
+                     ];
+                     const laserAdjacent = laseradjacentCells.some(({
+                             row: r,
+                             col: c
+                         }) =>
+                         grid[r] && grid[r][c] && grid[r][c].element === 'laser'
+                     );
+
+
+
+
+
+
+
+
+                     // If water is adjacent to grass, start or increment the delay
+                     if (laserAdjacent) {
+                         cell.laserdelay++;
+
+
+
+
+
+
+
+
+                         // Replace water with grass after delay of 30 frames
+                         if (cell.laserdelay >= 5) {
+                         
+                    
+                     
+                             cell.element = 'magma';
+                             cell.laserdelay = 0;
+                         }
+                     }
+         }
+         if(cell.element==='magma'){
+             const laseradjacentCells = [{
+                             row: row - 1,
+                             col: col
+                         }
+                     ];
+                     const laserAdjacent = laseradjacentCells.some(({
+                             row: r,
+                             col: c
+                         }) =>
+                         grid[r] && grid[r][c] && grid[r][c].element === 'laser'
+                     );
+
+
+
+
+
+
+
+
+                     // If water is adjacent to grass, start or increment the delay
+                     if (laserAdjacent) {
+                         cell.laserdelay++;
+
+
+
+
+
+
+
+
+                         // Replace water with grass after delay of 30 frames
+                         if (cell.laserdelay >= 2) {
+                         
+                    
+                     
+                             cell.element = 'empty';
+                             cell.laserdelay = 0;
+                         }
+                     }
+         }
+         if(cell.element==='ice'){
+             const laseradjacentCells = [{
+                             row: row - 1,
+                             col: col
+                         }, // Up
+                         {
+                             row: row + 1,
+                             col: col
+                         }, // Down
+                         {
+                             row: row,
+                             col: col - 1
+                         }, // Left
+                         {
+                             row: row,
+                             col: col + 1
+                         } // Right
+                     ];
+                     const laserAdjacent = laseradjacentCells.some(({
+                             row: r,
+                             col: c
+                         }) =>
+                         grid[r] && grid[r][c] && grid[r][c].element === 'laser'
+                     );
+
+
+
+
+
+
+
+
+                     // If water is adjacent to grass, start or increment the delay
+                     if (laserAdjacent) {
+                         cell.laserdelay++;
+
+
+
+
+
+
+
+
+                         // Replace water with grass after delay of 30 frames
+                         if (cell.laserdelay >= 0) {
+                         
+                    
+                     
+                             cell.element = 'empty';
+                             cell.laserdelay = 0;
+                         }
+                     }
+         }
+         if(cell.element==='snow'){
+             const laseradjacentCells = [{
+                             row: row - 1,
+                             col: col
+                         }, // Up
+                         {
+                             row: row + 1,
+                             col: col
+                         }, // Down
+                         {
+                             row: row,
+                             col: col - 1
+                         }, // Left
+                         {
+                             row: row,
+                             col: col + 1
+                         } // Right
+                     ];
+                     const laserAdjacent = laseradjacentCells.some(({
+                             row: r,
+                             col: c
+                         }) =>
+                         grid[r] && grid[r][c] && grid[r][c].element === 'laser'
+                     );
+
+
+
+
+
+
+
+
+                     // If water is adjacent to grass, start or increment the delay
+                     if (laserAdjacent) {
+                         cell.laserdelay++;
+
+
+
+
+
+
+
+
+                         // Replace water with grass after delay of 30 frames
+                         if (cell.laserdelay >= 1) {
+                         
+                    
+                     
+                             cell.element = 'water';
+                             cell.laserdelay = 0;
+                         }
+                     }
+         }
+         if(cell.element==='glass'){
+             const laseradjacentCells = [{
+                             row: row - 1,
+                             col: col
+                         }, // Up
+                         {
+                             row: row + 1,
+                             col: col
+                         }, // Down
+                         {
+                             row: row,
+                             col: col - 1
+                         }, // Left
+                         {
+                             row: row,
+                             col: col + 1
+                         } // Right
+                     ];
+                     const laserAdjacent = laseradjacentCells.some(({
+                             row: r,
+                             col: c
+                         }) =>
+                         grid[r] && grid[r][c] && grid[r][c].element === 'laser'
+                     );
+
+
+
+
+
+
+
+
+                     // If water is adjacent to grass, start or increment the delay
+                     if (laserAdjacent) {
+                         cell.laserdelay++;
+
+
+
+
+
+
+
+
+                         // Replace water with grass after delay of 30 frames
+                         if (cell.laserdelay >= 3) {
+                         
+                    
+                     
+                             cell.element = 'moltensand';
+                             cell.laserdelay = 0;
+                         }
+                     }
+         }
+         if(cell.element==='obsidian'){
+             const laseradjacentCells = [{
+                             row: row - 1,
+                             col: col
+                         }, // Up
+                         {
+                             row: row + 1,
+                             col: col
+                         }, // Down
+                         {
+                             row: row,
+                             col: col - 1
+                         }, // Left
+                         {
+                             row: row,
+                             col: col + 1
+                         } // Right
+                     ];
+                     const laserAdjacent = laseradjacentCells.some(({
+                             row: r,
+                             col: c
+                         }) =>
+                         grid[r] && grid[r][c] && grid[r][c].element === 'laser'
+                     );
+
+
+
+
+
+
+
+
+                     // If water is adjacent to grass, start or increment the delay
+                     if (laserAdjacent) {
+                         cell.laserdelay++;
+
+
+
+
+
+
+
+
+                         // Replace water with grass after delay of 30 frames
+                         if (cell.laserdelay >= 2) {
+                         
+                    
+                     
+                             cell.element = 'magma';
+                             cell.laserdelay = 0;
+                         }
+                     }
+         }
+         if(cell.element==='concrete'){
+             const laseradjacentCells = [{
+                             row: row - 1,
+                             col: col
+                         }, // Up
+                         {
+                             row: row + 1,
+                             col: col
+                         }, // Down
+                         {
+                             row: row,
+                             col: col - 1
+                         }, // Left
+                         {
+                             row: row,
+                             col: col + 1
+                         } // Right
+                     ];
+                     const laserAdjacent = laseradjacentCells.some(({
+                             row: r,
+                             col: c
+                         }) =>
+                         grid[r] && grid[r][c] && grid[r][c].element === 'laser'
+                     );
+
+
+
+
+
+
+
+
+                     // If water is adjacent to grass, start or increment the delay
+                     if (laserAdjacent) {
+                         cell.laserdelay++;
+
+
+
+
+
+
+
+
+                         // Replace water with grass after delay of 30 frames
+                         if (cell.laserdelay >= 2) {
+                         
+                    
+                     
+                             cell.element = 'stone';
+                             cell.laserdelay = -2;
+                         }
+                     }
+         }
+         if(cell.element==='sugar'){
+             const laseradjacentCells = [{
+                             row: row - 1,
+                             col: col
+                         }, // Up
+                         {
+                             row: row + 1,
+                             col: col
+                         }, // Down
+                         {
+                             row: row,
+                             col: col - 1
+                         }, // Left
+                         {
+                             row: row,
+                             col: col + 1
+                         } // Right
+                     ];
+                     const laserAdjacent = laseradjacentCells.some(({
+                             row: r,
+                             col: c
+                         }) =>
+                         grid[r] && grid[r][c] && grid[r][c].element === 'laser'
+                     );
+
+
+
+
+
+
+
+
+                     // If water is adjacent to grass, start or increment the delay
+                     if (laserAdjacent) {
+                         cell.laserdelay++;
+
+
+
+
+
+
+
+
+                         // Replace water with grass after delay of 30 frames
+                         if (cell.laserdelay >= 4) {
+                         
+                    
+                     
+                             cell.element = 'crystal';
+                             cell.laserdelay = -2;
+                         }
+                     }
+         }
+         if(cell.element==='crystal'){
+             const laseradjacentCells = [{
+                             row: row - 1,
+                             col: col
+                         }, // Up
+                         {
+                             row: row + 1,
+                             col: col
+                         }, // Down
+                         {
+                             row: row,
+                             col: col - 1
+                         }, // Left
+                         {
+                             row: row,
+                             col: col + 1
+                         } // Right
+                     ];
+                     const laserAdjacent = laseradjacentCells.some(({
+                             row: r,
+                             col: c
+                         }) =>
+                         grid[r] && grid[r][c] && grid[r][c].element === 'laser'
+                     );
+
+
+
+
+
+
+
+
+                     // If water is adjacent to grass, start or increment the delay
+                     if (laserAdjacent) {
+                         cell.laserdelay++;
+
+
+
+
+
+
+
+
+                         // Replace water with grass after delay of 30 frames
+                         if (cell.laserdelay >= 3) {
+                         
+                    
+                     
+                             cell.element = 'lava';
+                             cell.laserdelay = 0;
+                         }
+                     }
+         }
+         if(cell.element==='basalt'){
+             const laseradjacentCells = [{
+                             row: row - 1,
+                             col: col
+                         }, // Up
+                         {
+                             row: row + 1,
+                             col: col
+                         }, // Down
+                         {
+                             row: row,
+                             col: col - 1
+                         }, // Left
+                         {
+                             row: row,
+                             col: col + 1
+                         } // Right
+                     ];
+                     const laserAdjacent = laseradjacentCells.some(({
+                             row: r,
+                             col: c
+                         }) =>
+                         grid[r] && grid[r][c] && grid[r][c].element === 'laser'
+                     );
+
+
+
+
+
+
+
+
+                     // If water is adjacent to grass, start or increment the delay
+                     if (laserAdjacent) {
+                         cell.laserdelay++;
+
+
+
+
+
+
+
+
+                         // Replace water with grass after delay of 30 frames
+                         if (cell.laserdelay >= 2) {
+                         
+                    
+                     
+                             cell.element = 'magma';
+                             cell.laserdelay = 0;
+                         }
+                     }
+         }
+         if(cell.element==='glitch'){
+             const laseradjacentCells = [{
+                             row: row - 1,
+                             col: col
+                         }
+                     ];
+                     const laserAdjacent = laseradjacentCells.some(({
+                             row: r,
+                             col: c
+                         }) =>
+                         grid[r] && grid[r][c] && grid[r][c].element === 'laser'
+                     );
+
+
+
+
+
+
+
+
+                     // If water is adjacent to grass, start or increment the delay
+                     if (laserAdjacent) {
+                         cell.laserdelay++;
+
+
+
+
+
+
+
+
+                         // Replace water with grass after delay of 30 frames
+                         if (cell.laserdelay >= 50) {
+                         
+                    
+                     
+                             cell.element = 'blackhole';
+                             cell.laserdelay = 0;
+                         }
+                     }
+         }
+         if(cell.element==='blackhole'){
+             const laseradjacentCells = [{
+                             row: row - 1,
+                             col: col
+                         }
+                     ];
+                     const laserAdjacent = laseradjacentCells.some(({
+                             row: r,
+                             col: c
+                         }) =>
+                         grid[r] && grid[r][c] && grid[r][c].element === 'laser'
+                     );
+
+
+
+
+
+
+
+
+                     // If water is adjacent to grass, start or increment the delay
+                     if (laserAdjacent) {
+                         cell.laserdelay++;
+
+
+
+
+
+
+
+
+                         // Replace water with grass after delay of 30 frames
+                         if (cell.laserdelay >= 50) {
+                         
+                    
+                     
+                             cell.element = 'UExplosion';
+                             cell.laserdelay = 0;
+                         }
+                     }
+         }
+         if(cell.element==='fly'){
+             const laseradjacentCells = [{
+                             row: row - 1,
+                             col: col
+                         }, // Up
+                         {
+                             row: row + 1,
+                             col: col
+                         }, // Down
+                         {
+                             row: row,
+                             col: col - 1
+                         }, // Left
+                         {
+                             row: row,
+                             col: col + 1
+                         } // Right
+                     ];
+                     const laserAdjacent = laseradjacentCells.some(({
+                             row: r,
+                             col: c
+                         }) =>
+                         grid[r] && grid[r][c] && grid[r][c].element === 'laser'
+                     );
+
+
+
+
+
+
+
+
+                     // If water is adjacent to grass, start or increment the delay
+                     if (laserAdjacent) {
+                         cell.laserdelay++;
+
+
+
+
+
+
+
+
+                         // Replace water with grass after delay of 30 frames
+                         if (cell.laserdelay >= 0) {
+                         
+                    
+                     
+                             cell.element = 'empty';
+                             cell.laserdelay = 0;
+                         }
+                     }
+         }
+         if(cell.element==='ash'){
+             const laseradjacentCells = [{
+                             row: row - 1,
+                             col: col
+                         }
+                     ];
+                     const laserAdjacent = laseradjacentCells.some(({
+                             row: r,
+                             col: c
+                         }) =>
+                         grid[r] && grid[r][c] && grid[r][c].element === 'laser'
+                     );
+
+
+
+
+
+
+
+
+                     // If water is adjacent to grass, start or increment the delay
+                     if (laserAdjacent) {
+                         cell.laserdelay++;
+
+
+
+
+
+
+
+
+                         // Replace water with grass after delay of 30 frames
+                         if (cell.laserdelay >= 0) {
+                         
+                    
+                     
+                             cell.element = 'empty';
+                             cell.laserdelay = 0;
+                         }
+                     }
+         }
+         if(cell.element==='liquidN'){
+             const laseradjacentCells = [{
+                             row: row - 1,
+                             col: col
+                         }, // Up
+                         {
+                             row: row + 1,
+                             col: col
+                         }, // Down
+                         {
+                             row: row,
+                             col: col - 1
+                         }, // Left
+                         {
+                             row: row,
+                             col: col + 1
+                         } // Right
+                     ];
+                     const laserAdjacent = laseradjacentCells.some(({
+                             row: r,
+                             col: c
+                         }) =>
+                         grid[r] && grid[r][c] && grid[r][c].element === 'laser'
+                     );
+
+
+
+
+
+
+
+
+                     // If water is adjacent to grass, start or increment the delay
+                     if (laserAdjacent) {
+                         cell.laserdelay++;
+
+
+
+
+
+
+
+
+                         // Replace water with grass after delay of 30 frames
+                         if (cell.laserdelay >= 2) {
+                         
+                    
+                     
+                             cell.element = 'ice';
+                             cell.laserdelay = 0;
+                         }
+                     }
+         }
+         if(cell.element==='milk'){
+             const laseradjacentCells = [{
+                             row: row - 1,
+                             col: col
+                         }, // Up
+                         {
+                             row: row + 1,
+                             col: col
+                         }, // Down
+                         {
+                             row: row,
+                             col: col - 1
+                         }, // Left
+                         {
+                             row: row,
+                             col: col + 1
+                         } // Right
+                     ];
+                     const laserAdjacent = laseradjacentCells.some(({
+                             row: r,
+                             col: c
+                         }) =>
+                         grid[r] && grid[r][c] && grid[r][c].element === 'laser'
+                     );
+
+
+
+
+
+
+
+
+                     // If water is adjacent to grass, start or increment the delay
+                     if (laserAdjacent) {
+                         cell.laserdelay++;
+
+
+
+
+
+
+
+
+                         // Replace water with grass after delay of 30 frames
+                         if (cell.laserdelay >= 4) {
+                         
+                    
+                     
+                             cell.element = 'steam';
+                             cell.laserdelay = 0;
+                         }
+                     }
+         }
+         if(cell.element==='steel'){
+             const laseradjacentCells = [{
+                             row: row - 1,
+                             col: col
+                         }, // Up
+                         {
+                             row: row + 1,
+                             col: col
+                         }, // Down
+                         {
+                             row: row,
+                             col: col - 1
+                         }, // Left
+                         {
+                             row: row,
+                             col: col + 1
+                         } // Right
+                     ];
+                     const laserAdjacent = laseradjacentCells.some(({
+                             row: r,
+                             col: c
+                         }) =>
+                         grid[r] && grid[r][c] && grid[r][c].element === 'laser'
+                     );
+
+
+
+
+
+
+
+
+                     // If water is adjacent to grass, start or increment the delay
+                     if (laserAdjacent) {
+                         cell.laserdelay++;
+
+
+
+
+
+
+
+
+                         // Replace water with grass after delay of 30 frames
+                         if (cell.laserdelay >= 2) {
+                         
+                    
+                     
+                             cell.element = 'rust';
+                             cell.laserdelay = 0;
+                         }
+                     }
+         }
+         if(cell.element==='rust'){
+             const laseradjacentCells = [{
+                             row: row - 1,
+                             col: col
+                         }
+                     ];
+                     const laserAdjacent = laseradjacentCells.some(({
+                             row: r,
+                             col: c
+                         }) =>
+                         grid[r] && grid[r][c] && grid[r][c].element === 'laser'
+                     );
+
+
+
+
+
+
+
+
+                     // If water is adjacent to grass, start or increment the delay
+                     if (laserAdjacent) {
+                         cell.laserdelay++;
+
+
+
+
+
+
+
+
+                         // Replace water with grass after delay of 30 frames
+                         if (cell.laserdelay >= 2) {
+                         
+                    
+                     
+                             cell.element = 'magma';
+                             cell.laserdelay = 0;
+                         }
+                     }
+         }
+         if(cell.element==='wetsponge'){
+             const laseradjacentCells = [{
+                             row: row - 1,
+                             col: col
+                         }, // Up
+                         {
+                             row: row + 1,
+                             col: col
+                         }, // Down
+                         {
+                             row: row,
+                             col: col - 1
+                         }, // Left
+                         {
+                             row: row,
+                             col: col + 1
+                         } // Right
+                     ];
+                     const laserAdjacent = laseradjacentCells.some(({
+                             row: r,
+                             col: c
+                         }) =>
+                         grid[r] && grid[r][c] && grid[r][c].element === 'laser'
+                     );
+
+
+
+
+
+
+
+
+                     // If water is adjacent to grass, start or increment the delay
+                     if (laserAdjacent) {
+                         cell.laserdelay++;
+
+
+
+
+
+
+
+
+                         // Replace water with grass after delay of 30 frames
+                         if (cell.laserdelay >= 2) {
+                         
+                    
+                     
+                             cell.element = 'sponge';
+                             cell.laserdelay = 0;
+                         }
+                     }
+         }
+         if(cell.element==='salt'){
+             const laseradjacentCells = [{
+                             row: row - 1,
+                             col: col
+                         }, // Up
+                         {
+                             row: row + 1,
+                             col: col
+                         }, // Down
+                         {
+                             row: row,
+                             col: col - 1
+                         }, // Left
+                         {
+                             row: row,
+                             col: col + 1
+                         } // Right
+                     ];
+                     const laserAdjacent = laseradjacentCells.some(({
+                             row: r,
+                             col: c
+                         }) =>
+                         grid[r] && grid[r][c] && grid[r][c].element === 'laser'
+                     );
+
+
+
+
+
+
+
+
+                     // If water is adjacent to grass, start or increment the delay
+                     if (laserAdjacent) {
+                         cell.laserdelay++;
+
+
+
+
+
+
+
+
+                         // Replace water with grass after delay of 30 frames
+                         if (cell.laserdelay >= 3) {
+                         
+                    
+                     
+                             cell.element = 'crystal';
+                             cell.laserdelay = 0;
+                         }
+                     }
+         }
+         if(cell.element==='quartz'){
+             const laseradjacentCells = [{
+                             row: row - 1,
+                             col: col
+                         }, // Up
+                         {
+                             row: row + 1,
+                             col: col
+                         }, // Down
+                         {
+                             row: row,
+                             col: col - 1
+                         }, // Left
+                         {
+                             row: row,
+                             col: col + 1
+                         } // Right
+                     ];
+                     const laserAdjacent = laseradjacentCells.some(({
+                             row: r,
+                             col: c
+                         }) =>
+                         grid[r] && grid[r][c] && grid[r][c].element === 'laser'
+                     );
+
+
+
+
+
+
+
+
+                     // If water is adjacent to grass, start or increment the delay
+                     if (laserAdjacent) {
+                         cell.laserdelay++;
+
+
+
+
+
+
+
+
+                         // Replace water with grass after delay of 30 frames
+                         if (cell.laserdelay >= 4) {
+                         
+                    
+                     
+                             cell.element = 'crystal';
+                             cell.laserdelay = 0;
+                         }
+                     }
+         }
+         if(cell.element==='fog'){
+             const laseradjacentCells = [{
+                             row: row - 1,
+                             col: col
+                         }
+                     ];
+                     const laserAdjacent = laseradjacentCells.some(({
+                             row: r,
+                             col: c
+                         }) =>
+                         grid[r] && grid[r][c] && grid[r][c].element === 'laser'
+                     );
+
+
+
+
+
+
+
+
+                     // If water is adjacent to grass, start or increment the delay
+                     if (laserAdjacent) {
+                         cell.laserdelay++;
+
+
+
+
+
+
+
+
+                         // Replace water with grass after delay of 30 frames
+                         if (cell.laserdelay >= 0) {
+                         
+                    
+                     
+                             cell.element = 'empty';
+                             cell.laserdelay = 0;
+                         }
+                     }
+         }
+         if(cell.element==='bone'){
+             const laseradjacentCells = [{
+                             row: row - 1,
+                             col: col
+                         }, // Up
+                         {
+                             row: row + 1,
+                             col: col
+                         }, // Down
+                         {
+                             row: row,
+                             col: col - 1
+                         }, // Left
+                         {
+                             row: row,
+                             col: col + 1
+                         } // Right
+                     ];
+                     const laserAdjacent = laseradjacentCells.some(({
+                             row: r,
+                             col: c
+                         }) =>
+                         grid[r] && grid[r][c] && grid[r][c].element === 'laser'
+                     );
+
+
+
+
+
+
+
+
+                     // If water is adjacent to grass, start or increment the delay
+                     if (laserAdjacent) {
+                         cell.laserdelay++;
+
+
+
+
+
+
+
+
+                         // Replace water with grass after delay of 30 frames
+                         if (cell.laserdelay >= 2) {
+                         
+                    
+                     
+                             cell.element = 'stone';
+                             cell.laserdelay = 0;
+                         }
+                     }
+         }
+         if(cell.element==='copper'){
+             const laseradjacentCells = [{
+                             row: row - 1,
+                             col: col
+                         }, // Up
+                         {
+                             row: row + 1,
+                             col: col
+                         }, // Down
+                         {
+                             row: row,
+                             col: col - 1
+                         }, // Left
+                         {
+                             row: row,
+                             col: col + 1
+                         } // Right
+                     ];
+                     const laserAdjacent = laseradjacentCells.some(({
+                             row: r,
+                             col: c
+                         }) =>
+                         grid[r] && grid[r][c] && grid[r][c].element === 'laser'
+                     );
+
+
+
+
+
+
+
+
+                     // If water is adjacent to grass, start or increment the delay
+                     if (laserAdjacent) {
+                         cell.laserdelay++;
+
+
+
+
+
+
+
+
+                         // Replace water with grass after delay of 30 frames
+                         if (cell.laserdelay >= 4) {
+                         
+                    
+                     
+                             cell.element = 'copper2';
+                             cell.laserdelay = 0;
+                         }
+                     }
+         }
+         if(cell.element==='copper2'){
+             const laseradjacentCells = [{
+                             row: row - 1,
+                             col: col
+                         }
+                     ];
+                     const laserAdjacent = laseradjacentCells.some(({
+                             row: r,
+                             col: c
+                         }) =>
+                         grid[r] && grid[r][c] && grid[r][c].element === 'laser'
+                     );
+
+
+
+
+
+
+
+
+                     // If water is adjacent to grass, start or increment the delay
+                     if (laserAdjacent) {
+                         cell.laserdelay++;
+
+
+
+
+
+
+
+
+                         // Replace water with grass after delay of 30 frames
+                         if (cell.laserdelay >= 3) {
+                         
+                    
+                     
+                             cell.element = 'copper3';
+                             cell.laserdelay = 0;
+                         }
+                     }
+         }
+         if(cell.element==='copper3'){
+             const laseradjacentCells = [{
+                             row: row - 1,
+                             col: col
+                         }
+                     ];
+                     const laserAdjacent = laseradjacentCells.some(({
+                             row: r,
+                             col: c
+                         }) =>
+                         grid[r] && grid[r][c] && grid[r][c].element === 'laser'
+                     );
+
+
+
+
+
+
+
+
+                     // If water is adjacent to grass, start or increment the delay
+                     if (laserAdjacent) {
+                         cell.laserdelay++;
+
+
+
+
+
+
+
+
+                         // Replace water with grass after delay of 30 frames
+                         if (cell.laserdelay >= 3) {
+                         
+                    
+                     
+                             cell.element = 'copper4';
+                             cell.laserdelay = 0;
+                         }
+                     }
+         }
+         if(cell.element==='copper4'){
+             const laseradjacentCells = [{
+                             row: row - 1,
+                             col: col
+                         }
+                     ];
+                     const laserAdjacent = laseradjacentCells.some(({
+                             row: r,
+                             col: c
+                         }) =>
+                         grid[r] && grid[r][c] && grid[r][c].element === 'laser'
+                     );
+
+
+
+
+
+
+
+
+                     // If water is adjacent to grass, start or increment the delay
+                     if (laserAdjacent) {
+                         cell.laserdelay++;
+
+
+
+
+
+
+
+
+                         // Replace water with grass after delay of 30 frames
+                         if (cell.laserdelay >= 3) {
+                         
+                    
+                     
+                             cell.element = 'copper5';
+                             cell.laserdelay = 0;
+                         }
+                     }
+         }
+         if(cell.element==='copper5'){
+             const laseradjacentCells = [{
+                             row: row - 1,
+                             col: col
+                         }
+                     ];
+                     const laserAdjacent = laseradjacentCells.some(({
+                             row: r,
+                             col: c
+                         }) =>
+                         grid[r] && grid[r][c] && grid[r][c].element === 'laser'
+                     );
+
+
+
+
+
+
+
+
+                     // If water is adjacent to grass, start or increment the delay
+                     if (laserAdjacent) {
+                         cell.laserdelay++;
+
+
+
+
+
+
+
+
+                         // Replace water with grass after delay of 30 frames
+                         if (cell.laserdelay >= 3) {
+                         
+                    
+                     
+                             cell.element = 'empty';
+                             cell.laserdelay = 0;
+                         }
+                     }
+         }
+         if(cell.element==='mercury'){
+             const laseradjacentCells = [{
+                             row: row - 1,
+                             col: col
+                         }, // Up
+                         {
+                             row: row + 1,
+                             col: col
+                         }, // Down
+                         {
+                             row: row,
+                             col: col - 1
+                         }, // Left
+                         {
+                             row: row,
+                             col: col + 1
+                         } // Right
+                     ];
+                     const laserAdjacent = laseradjacentCells.some(({
+                             row: r,
+                             col: c
+                         }) =>
+                         grid[r] && grid[r][c] && grid[r][c].element === 'laser'
+                     );
+
+
+
+
+
+
+
+
+                     // If water is adjacent to grass, start or increment the delay
+                     if (laserAdjacent) {
+                         cell.laserdelay++;
+
+
+
+
+
+
+
+
+                         // Replace water with grass after delay of 30 frames
+                         if (cell.laserdelay >= 5) {
+                         
+                    
+                     
+                             cell.element = 'steel';
+                             cell.laserdelay = 0;
+                         }
+                     }
+         }
+         if(cell.element==='acid'){
+             const laseradjacentCells = [{
+                             row: row - 1,
+                             col: col
+                         }
+                     ];
+                     const laserAdjacent = laseradjacentCells.some(({
+                             row: r,
+                             col: c
+                         }) =>
+                         grid[r] && grid[r][c] && grid[r][c].element === 'laser'
+                     );
+
+
+
+
+
+
+
+
+                     // If water is adjacent to grass, start or increment the delay
+                     if (laserAdjacent) {
+                         cell.laserdelay++;
+
+
+
+
+
+
+
+
+                         // Replace water with grass after delay of 30 frames
+                         if (cell.laserdelay >= 2) {
+                         
+                    
+                     
+                             cell.element = 'empty';
+                             cell.laserdelay = 0;
+                         }
+                     }
+         }
+         if(cell.element==='plastic'){
+             const laseradjacentCells = [{
+                             row: row - 1,
+                             col: col
+                         }, // Up
+                         {
+                             row: row + 1,
+                             col: col
+                         }, // Down
+                         {
+                             row: row,
+                             col: col - 1
+                         }, // Left
+                         {
+                             row: row,
+                             col: col + 1
+                         } // Right
+                     ];
+                     const laserAdjacent = laseradjacentCells.some(({
+                             row: r,
+                             col: c
+                         }) =>
+                         grid[r] && grid[r][c] && grid[r][c].element === 'laser'
+                     );
+
+
+
+
+
+
+
+
+                     // If water is adjacent to grass, start or increment the delay
+                     if (laserAdjacent) {
+                         cell.laserdelay++;
+
+
+
+
+
+
+
+
+                         // Replace water with grass after delay of 30 frames
+                         if (cell.laserdelay >= 2) {
+                         
+                    
+                     
+                             cell.element = 'pwater';
+                             cell.laserdelay = 0;
+                         }
+                     }
+         }
+         if(cell.element==='pwater'){
+             const laseradjacentCells = [{
+                             row: row - 1,
+                             col: col
+                         }, // Up
+                         {
+                             row: row + 1,
+                             col: col
+                         }, // Down
+                         {
+                             row: row,
+                             col: col - 1
+                         }, // Left
+                         {
+                             row: row,
+                             col: col + 1
+                         } // Right
+                     ];
+                     const laserAdjacent = laseradjacentCells.some(({
+                             row: r,
+                             col: c
+                         }) =>
+                         grid[r] && grid[r][c] && grid[r][c].element === 'laser'
+                     );
+
+
+
+
+
+
+
+
+                     // If water is adjacent to grass, start or increment the delay
+                     if (laserAdjacent) {
+                         cell.laserdelay++;
+
+
+
+
+
+
+
+
+                         // Replace water with grass after delay of 30 frames
+                         if (cell.laserdelay >= 4) {
+                         
+                    
+                     
+                             cell.element = 'water';
+                             cell.laserdelay = 0;
+                         }
+                     }
+         }
+         if(cell.element==='wetsand'){
+             const laseradjacentCells = [{
+                             row: row - 1,
+                             col: col
+                         }, // Up
+                         {
+                             row: row + 1,
+                             col: col
+                         }, // Down
+                         {
+                             row: row,
+                             col: col - 1
+                         }, // Left
+                         {
+                             row: row,
+                             col: col + 1
+                         } // Right
+                     ];
+                     const laserAdjacent = laseradjacentCells.some(({
+                             row: r,
+                             col: c
+                         }) =>
+                         grid[r] && grid[r][c] && grid[r][c].element === 'laser'
+                     );
+
+
+
+
+
+
+
+
+                     // If water is adjacent to grass, start or increment the delay
+                     if (laserAdjacent) {
+                         cell.laserdelay++;
+
+
+
+
+
+
+
+
+                         // Replace water with grass after delay of 30 frames
+                         if (cell.laserdelay >= 2) {
+                         
+                    
+                     
+                             cell.element = 'sand';
+                             cell.laserdelay = 0;
+                         }
+                     }
+         }
+         if(cell.element==='saltwater'){
+             const laseradjacentCells = [{
+                             row: row - 1,
+                             col: col
+                         }, // Up
+                         {
+                             row: row + 1,
+                             col: col
+                         }, // Down
+                         {
+                             row: row,
+                             col: col - 1
+                         }, // Left
+                         {
+                             row: row,
+                             col: col + 1
+                         } // Right
+                     ];
+                     const laserAdjacent = laseradjacentCells.some(({
+                             row: r,
+                             col: c
+                         }) =>
+                         grid[r] && grid[r][c] && grid[r][c].element === 'laser'
+                     );
+
+
+
+
+
+
+
+
+                     // If water is adjacent to grass, start or increment the delay
+                     if (laserAdjacent) {
+                         cell.laserdelay++;
+
+
+
+
+
+
+
+
+                         // Replace water with grass after delay of 30 frames
+                         if (cell.laserdelay >= 2) {
+                         
+                    
+                     
+                             cell.element = 'salt';
+                             cell.laserdelay = 0;
+                         }
+                     }
+         }
 
 
                  if (cell.element === 'water') {
@@ -4734,6 +4759,132 @@ function updateGrid() {
                      }
                  }
               }
+              if(cell.element === 'flashbang'){
+                     cell.age++;
+                     if(cell.age>=10){
+                         cell.age=0;
+                         cell.element='FExplosion';
+                     }
+                 }
+                 if(cell.element === 'flash'){
+                     cell.age++;
+                     if(cell.age>=5){
+                         cell.age=0;
+                         cell.element='empty';
+                     }
+                 }
+                 if(cell.element === 'FExplosion'){
+                     cell.age++;
+                     if(cell.age>=5){
+                         cell.age=0;
+                         cell.element='empty';
+                     }
+                 }
+                 if (cell.element === 'flashbang' && row < rows - 1) {
+                    
+                    if (grid[row + 1][col].element === 'empty') {
+                        grid[row + 1][col].element = 'flashbang';
+                        cell.element = 'empty'; cell.age = 0;}
+                   
+                     else {
+                        let leftSpread = col > 0 && grid[row + 1][col - 1].element === 'empty';
+                        let rightSpread = col < cols - 1 && grid[row + 1][col + 1].element === 'empty';
+                        if (leftSpread && rightSpread) {
+                            if (Math.random() < 0.5) leftSpread = false;
+                            else rightSpread = false;
+                        }
+                        if (leftSpread) {
+                            grid[row + 1][col - 1].element = 'flashbang';
+                            cell.element = 'empty';
+                        } else if (rightSpread) {
+                            grid[row + 1][col + 1].element = 'flashbang';
+                            cell.element = 'empty';
+                        }
+                    }
+                }
+                if (cell.element === 'FExplosion') {
+  const fexplosionRadius = 5; // Define the explosion radius
+  const fstartRow = Math.max(0, row - fexplosionRadius);
+  const fendRow = Math.min(rows - 1, row + fexplosionRadius);
+  const fstartCol = Math.max(0, col - fexplosionRadius);
+  const fendCol = Math.min(cols - 1, col + fexplosionRadius);
+
+  // Set the center of the explosion to fire
+  cell.element = 'flash'; // Set the center cell to fire
+   cell.age=0;
+  for (let r = fstartRow; r <= fendRow; r++) {
+      for (let c = fstartCol; c <= fendCol; c++) {
+          const fdistance = Math.sqrt((r - row) ** 2 + (c - col) ** 2); // Calculate the distance from the explosion center
+          if (fdistance <= fexplosionRadius) {
+              // Check if the cell is TNT
+              if (grid[r][c] && grid[r][c].element === 'empty') {
+                 
+                 grid[r][c].element = 'flash'; // Ignite flammable material
+                 grid[r][c].age = 0; // Initialize fire's age
+                 
+             }
+          }
+      }
+  }
+ 
+}
+if(cell.element==='gallium'){
+     const adjacentCells = [{
+                             row: row - 1,
+                             col: col
+                         }, // Up
+                         
+                        
+                     
+                     ];
+
+                     // Check for adjacent grass cells
+                     let GMAdjacent = adjacentCells.some(({
+                             row: r,
+                             col: c
+                         }) =>
+                         grid[r] && grid[r][c] && grid[r][c].element !== 'empty' && grid[r][c].element !== 'gallium' 
+                     );
+                
+               if(GMAdjacent){
+                
+                 if(cell.delay>=1){
+                 cell.element='liquidgallium';
+               } cell.delay++;} 
+             }
+             if (cell.element === 'liquidgallium' && row < rows - 1) {
+                  cell.age++;
+                
+                     
+                     if (grid[row + 1][col].element === 'empty') {
+                      
+                         
+                         grid[row + 1][col].element = 'liquidgallium';
+                         cell.element = 'empty';
+                     
+                     }  else {
+                         let leftSpread = col > 0 && grid[row][col - 1].element === 'empty';
+                         let rightSpread = col < cols - 1 && grid[row][col + 1].element === 'empty';
+
+                         
+                          
+                         if (leftSpread && rightSpread) {
+                             if (Math.random() < 0.5){     rightSpread = false;
+                             }
+                           
+                             leftSpread = false;
+                         }
+                        
+                         if (leftSpread) {
+                             grid[row][col - 1].element = 'liquidgallium';
+                             cell.element = 'empty';
+                         } else if (rightSpread) {
+                             grid[row][col + 1].element = 'liquidgallium';
+                             cell.element = 'empty';
+                         }
+                      }
+                  
+                 }
 
                  // Handle water physics
                  if (cell.element === 'water' && row < rows - 1) {
@@ -4874,39 +5025,6 @@ if (cell.element === 'liquidN' && row < rows - 1) {
                              cell.element = 'empty';
                          } else if (rightSpread) {
                              grid[row][col + 1].element = 'milk';
-                             cell.element = 'empty';
-                         }
-                      }
-                  
-                 }
-                 if (cell.element === 'liquidgallium' && row < rows - 1) {
-                  cell.age++;
-                
-                     
-                     if (grid[row + 1][col].element === 'empty') {
-                      
-                         
-                         grid[row + 1][col].element = 'liquidgallium';
-                         cell.element = 'empty';
-                     
-                     }  else {
-                         let leftSpread = col > 0 && grid[row][col - 1].element === 'empty';
-                         let rightSpread = col < cols - 1 && grid[row][col + 1].element === 'empty';
-
-                         
-                          
-                         if (leftSpread && rightSpread) {
-                             if (Math.random() < 0.5){     rightSpread = false;
-                             }
-                           
-                             leftSpread = false;
-                         }
-                        
-                         if (leftSpread) {
-                             grid[row][col - 1].element = 'liquidgallium';
-                             cell.element = 'empty';
-                         } else if (rightSpread) {
-                             grid[row][col + 1].element = 'liquidgallium';
                              cell.element = 'empty';
                          }
                       }
@@ -5103,29 +5221,6 @@ if (cell.element === 'liquidN' && row < rows - 1) {
                         
                      }
                 }
-                  // Handle sand physics
-                  if (cell.element === 'gravel' && row < rows - 1) {
-                    
-                    if (grid[row + 1][col].element === 'empty') {
-                        grid[row + 1][col].element = 'gravel';
-                        cell.element = 'empty'; }
-                   
-                     else {
-                        let leftSpread = col > 0 && grid[row + 1][col - 1].element === 'empty';
-                        let rightSpread = col < cols - 1 && grid[row + 1][col + 1].element === 'empty';
-                        if (leftSpread && rightSpread) {
-                            if (Math.random() < 0.5) leftSpread = false;
-                            else rightSpread = false;
-                        }
-                        if (leftSpread) {
-                            grid[row + 1][col - 1].element = 'gravel';
-                            cell.element = 'empty';
-                        } else if (rightSpread) {
-                            grid[row + 1][col + 1].element = 'gravel';
-                            cell.element = 'empty';
-                        }
-                    }
-                }
                  // Handle sand physics
                  if (cell.element === 'dirt' && row < rows - 1) {
                     
@@ -5149,58 +5244,6 @@ if (cell.element === 'liquidN' && row < rows - 1) {
                          }
                      }
                  }
-                 if(cell.element === 'flashbang'){
-                     cell.age++;
-                     if(cell.age>=10){
-                         cell.age=0;
-                         cell.element='FExplosion';
-                     }
-                 }
-                 if(cell.element === 'flash'){
-                     cell.age++;
-                     if(cell.age>=5){
-                         cell.age=0;
-                         cell.element='empty';
-                     }
-                 }
-                 if(cell.element === 'FExplosion'){
-                     cell.age++;
-                     if(cell.age>=5){
-                         cell.age=0;
-                         cell.element='empty';
-                     }
-                 }
-                 if (cell.element === 'flashbang' && row < rows - 1) {
-                    
-                    if (grid[row + 1][col].element === 'empty') {
-                        grid[row + 1][col].element = 'flashbang';
-                        cell.element = 'empty'; }
-                   
-                     else {
-                        let leftSpread = col > 0 && grid[row + 1][col - 1].element === 'empty';
-                        let rightSpread = col < cols - 1 && grid[row + 1][col + 1].element === 'empty';
-                        if (leftSpread && rightSpread) {
-                            if (Math.random() < 0.5) leftSpread = false;
-                            else rightSpread = false;
-                        }
-                        if (leftSpread) {
-                            grid[row + 1][col - 1].element = 'flashbang';
-                            cell.element = 'empty';
-                        } else if (rightSpread) {
-                            grid[row + 1][col + 1].element = 'flashbang';
-                            cell.element = 'empty';
-                        }
-                    }
-                }
-                   // Handle sand physics
-                   if (cell.element === 'wax' && row < rows - 1) {
-                    
-                    if (grid[row + 1][col].element === 'empty') {
-                        grid[row + 1][col].element = 'wax';
-                        cell.element = 'empty'; }
-                   
-                    
-                }
                  if (cell.element === 'salt' && row < rows - 1) {
                     
                     if (grid[row + 1][col].element === 'empty') {
@@ -5679,31 +5722,21 @@ if (cell.element === 'liquidN' && row < rows - 1) {
                              row: r,
                              col: c
                          }) =>
-                         grid[r] && grid[r][c] && grid[r][c].element === 'water' || grid[r][c].element === 'liquidN'
+                         grid[r] && grid[r][c] && grid[r][c].element === 'water' 
                      );
-                    
                      // Transform dark lava into stone if adjacent to water
                      if (pwAdjacent) {
-                     
-                   
-                     } else {
-                         
-                       
-                         cell.age++;
-                     
-                     } 
-
- 
-}
-         if(cell.element==='uranium'){
-             if (cell.age < 100) {
+                        
+                     } else cell.age++;
+  if (cell.age < 100) {
       cell.uraniumColor = `rgba(0, 204, 0, ${1 - cell.age / 100})`;
   } else if (cell.age === 100) {
       cell.element = 'UExplosion';
     
       cell.uraniumColor = '#BC5800';
   }
-         }       
+}
+                
                  // Update Lava Cooling Process
                  if (cell.element === 'lava') {
                      cell.age++;
@@ -5824,32 +5857,6 @@ if (cell.element === 'liquidN' && row < rows - 1) {
   }
   cell.element = 'empty'; // Remove the explosion after it has done its effect
 }
-if (cell.element === 'FExplosion') {
-  const fexplosionRadius = 5; // Define the explosion radius
-  const fstartRow = Math.max(0, row - fexplosionRadius);
-  const fendRow = Math.min(rows - 1, row + fexplosionRadius);
-  const fstartCol = Math.max(0, col - fexplosionRadius);
-  const fendCol = Math.min(cols - 1, col + fexplosionRadius);
-
-  // Set the center of the explosion to fire
-  cell.element = 'flash'; // Set the center cell to fire
-   cell.age=0;
-  for (let r = fstartRow; r <= fendRow; r++) {
-      for (let c = fstartCol; c <= fendCol; c++) {
-          const fdistance = Math.sqrt((r - row) ** 2 + (c - col) ** 2); // Calculate the distance from the explosion center
-          if (fdistance <= fexplosionRadius) {
-              // Check if the cell is TNT
-              if (grid[r][c] && grid[r][c].element === 'empty') {
-                 
-                 grid[r][c].element = 'flash'; // Ignite flammable material
-                 grid[r][c].age = 0; // Initialize fire's age
-                 
-             }
-          }
-      }
-  }
- 
-}
 if (cell.element === 'nb') {
   const nexplosionRadius = 5; // Define the explosion radius
   const nstartRow = Math.max(0, row - nexplosionRadius);
@@ -5891,7 +5898,7 @@ if (cell.element === 'nb') {
   cell.element = 'empty'; // Remove the explosion after it has done its effect
 }                      
 if (cell.element === 'UExplosion') {
-  const UexplosionRadius = 20; // Define the explosion radius
+  const UexplosionRadius = 15; // Define the explosion radius
   const ustartRow = Math.max(0, row - UexplosionRadius);
   const uendRow = Math.min(rows - 1, row + UexplosionRadius);
   const ustartCol = Math.max(0, col - UexplosionRadius);
@@ -5941,10 +5948,8 @@ if (cell.element === 'blackhole') {
            
               cell.element='blackhole';
               if (grid[r][c] && elements[grid[r][c].element]) {
-                  
                   grid[r][c].element = 'empty'; // Ignite flammable material
                   grid[r][c].age = 0; // Initialize fire's age
-                 
               }
           }
       }
@@ -6052,32 +6057,6 @@ if (cell.element === 'smokeBomb') {
 }
 }
 if (cell.element === 'magma') {
-                   
-                   const adjacentCells = [{
-                           row: row - 1,
-                           col: col
-                       }, // Up
-                       {
-                           row: row + 1,
-                           col: col
-                       }, // Down
-                       {
-                           row: row,
-                           col: col - 1
-                       }, // Left
-                       {
-                           row: row,
-                           col: col + 1
-                       } // Right
-                   ];
-                       adjacentCells.forEach(({ row: r, col: c }) => {
-      if (grid[r] && grid[r][c] && elements[grid[r][c].element].flammable) {
-          grid[r][c].element = 'fire'; // Ignite flammable material
-          grid[r][c].age = 0; // Initialize fire's age
-      }
-  });
- }
- if (cell.element === 'laser') {
                    
                    const adjacentCells = [{
                            row: row - 1,
@@ -6371,8 +6350,6 @@ if (cell.element === 'snow' && row < rows - 1) {
   }
 
 }     
-
-  
 if (cell.element === 'pollen' && row < rows - 1) {
   cell.age++;
   cell.delay++;
@@ -7189,7 +7166,7 @@ if (cell.element === 'fog') {
 
 
 
- 
+
 
 
                  // Handle fire physics
@@ -7273,10 +7250,6 @@ if (cell.element === 'fog') {
                              of directions) {
                              const r = row + rOffset;
                              const c = col + cOffset;
-                             if (grid[r] && grid[r][c] && elements[grid[r][c].element].wflammable) {
-                                 grid[r][c].element = 'wfire'; // Ignite flammable material
-                                 
-                             }
 
                              // Check if the adjacent cell is valid and flammable
                              if (grid[r] && grid[r][c] && elements[grid[r][c].element].flammable) {
@@ -7317,102 +7290,10 @@ if (cell.element === 'fog') {
                      }
                  }
 
-        
-     if (cell.element === 'wfire') {
-                  const adjacentCells = [{
-                             row: row + 1,
-                             col: col
-                         }, // Down
-                         {
-                             row: row - 1,
-                             col: col
-                         }, // Up
-                         {
-                             row: row,
-                             col: col - 1
-                         }, // Left
-                         {
-                             row: row,
-                             col: col + 1
-                         } // Right
-                     ];
-                       // Check for adjacent fire cells
-                     let wfwAdjacent = adjacentCells.some(({
-                             row: r,
-                             col: c
-                         }) =>
-                         grid[r] && grid[r][c] && grid[r][c].element === 'water'
-                     );
-
-
-
-
-
-
-
-
-                     // Ignite oil if adjacent to fire, then skip movement logic
-                     if (wfwAdjacent) {
-                         cell.element = 'empty';
-                         cell.age = 0; // Reset age when transformed to fire
-                         
-                     }
-                     if (cell.age === 50) { // Check every 10 frames
-                         for (const {
-                                 row: rOffset,
-                                 col: cOffset
-                             }
-                             of directions) {
-                             const r = row + rOffset;
-                             const c = col + cOffset;
-                             if (grid[r] && grid[r][c] && elements[grid[r][c].element].wflammable) {
-                                 grid[r][c].element = 'wfire'; // Ignite flammable material
-                                 
-                             }
-
-                             // Check if the adjacent cell is valid and flammable
-                             if (grid[r] && grid[r][c] && elements[grid[r][c].element].flammable) {
-                                 grid[r][c].element = 'fire'; // Ignite flammable material
-                             }
-                         }
-                     }
-                     cell.age++;
-
-
-
-
-
-
-
-
-
-
-
-
-
-                     // Handle smoke and transformation logic as before...
-                     if (row > 0 && grid[row - 1][col].element === 'empty') {
-                         if (cell.age >= 10 && cell.age <= 13) {
-                             grid[row - 1][col].element = 'smoke'; // Place smoke above
-                         }
-                     }
-                     // Transform fire into smoke after 0.5 seconds
-                     if (cell.age >= 120) {
-                      if (Math.random() < 0.07) {
-                         cell.element = 'smoke';
-                         cell.age = 0; // Reset age for smoke
-                      } else
-                      if (Math.random() < 0.001) { 
-                          cell.element='ash';
-                      } else 
-                      cell.element='empty';
-                     }
-                 }
-
              }
          }
      }
-          let lastPlacementTime = 0; // Variable to store the last placement time
+                let lastPlacementTime = 0; // Variable to store the last placement time
        const placementCooldown = 10; // Cooldown in milliseconds (adjust as needed)
        function placeElement(x, y) {
      const currentTime = Date.now(); // Get the current time
@@ -7421,8 +7302,9 @@ if (cell.element === 'fog') {
          return; // Exit the function if the cooldown has not passed
      }
  
-     const colStart = Math.floor((x - (brushSize * voxelSize) / 2) / voxelSize);
-     const rowStart = Math.floor((y - (brushSize * voxelSize) / 2) / voxelSize);
+     const colStart = Math.floor(x / voxelSize);
+     const rowStart = Math.floor(y / voxelSize);
+ 
      // Check if the placement is within bounds
      if (rowStart < 0 || rowStart >= rows || colStart < 0 || colStart >= cols) {
          return; // Prevent placing outside the grid
@@ -7434,8 +7316,8 @@ if (cell.element === 'fog') {
  
      for (let i = 0; i < brushSize; i++) {
          for (let j = 0; j < brushSize; j++) {
-            const colStart = Math.floor(x / voxelSize);
-            const rowStart = Math.floor(y / voxelSize);
+             const row = rowStart + i;
+             const col = colStart + j;
              
              // Check bounds for brush size
              if (row < 0 || row >= rows || col < 0 || col >= cols ) {
@@ -7448,14 +7330,6 @@ if (cell.element === 'fog') {
                  grid[row][col].element = selectedElement;
                  grid[row][col].age = 0; // Reset age when placed
                  grid[row][col].grassColor = getRandomColorBetween(elements.grass.color1, elements.grass.color2); // Store the random color
-             } else   if (selectedElement === 'diamond') {
-                 grid[row][col].element = selectedElement;
-                 grid[row][col].age = 0; // Reset age when placed
-                 grid[row][col].diamondColor = getRandomColorBetween(elements.diamond.color1, elements.diamond.color2); // Store the random color
-             } else   if (selectedElement === 'moss') {
-                 grid[row][col].element = selectedElement;
-                 grid[row][col].age = 0; // Reset age when placed
-                 grid[row][col].mossColor = getRandomColorBetween(elements.moss.color1, elements.moss.color2); // Store the random color
              } else if (selectedElement === 'stone') {
                  grid[row][col].element = selectedElement;
                  grid[row][col].age = 0; // Reset age when placed
@@ -7472,6 +7346,14 @@ if (cell.element === 'fog') {
                  grid[row][col].element = selectedElement;
                  grid[row][col].age = 0; // Reset age when placed
                  grid[row][col].woodColor = getRandomColorBetween(elements.wood.color1, elements.wood.color2); // Store the random color
+             }  else   if (selectedElement === 'diamond') {
+                 grid[row][col].element = selectedElement;
+                 grid[row][col].age = 0; // Reset age when placed
+                 grid[row][col].diamondColor = getRandomColorBetween(elements.diamond.color1, elements.diamond.color2); // Store the random color
+             } else   if (selectedElement === 'moss') {
+                 grid[row][col].element = selectedElement;
+                 grid[row][col].age = 0; // Reset age when placed
+                 grid[row][col].mossColor = getRandomColorBetween(elements.moss.color1, elements.moss.color2); // Store the random color
              } else {
                  grid[row][col].element = selectedElement;
                  grid[row][col].age = 0; // Reset age when placed
@@ -7481,7 +7363,7 @@ if (cell.element === 'fog') {
  
      lastPlacementTime = currentTime; // Update the last placement time
  }
- canvas.addEventListener('touchstart', (e) => {
+  canvas.addEventListener('touchstart', (e) => {
     e.preventDefault(); // Prevent default touch behavior
     isDrawing = true;
     const x = e.touches[0].clientX - canvas.getBoundingClientRect().left;
@@ -7576,3 +7458,4 @@ canvas.addEventListener('touchmove', (e) => {
 </body>
 
 </html>
+
