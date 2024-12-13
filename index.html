@@ -224,6 +224,10 @@
     <button style="background-color: white" class="material-button" onclick="selectedElement = 'flashbang';">Flashbang</button>
     <button style="background-color: #595552; color: white;" class="material-button" onclick="selectedElement = 'gallium';">Gallium</button>
     <button style="background-color: #D12A2A; color: white;" class="material-button" onclick="selectedElement = 'brick';">Brick</button>
+        <button style="background-color: #272727; color: white;" class="material-button" onclick="selectedElement = 'charcoal';">Charcoal</button>
+        <button style="background-color: #ADADAD" class="material-button" onclick="selectedElement = 'clay';">Clay</button>
+        <button style="background-color: #FF7DEF" class="material-button" onclick="selectedElement = 'pig';">Pig</button>
+        <button style="background-color: #165900; color: white;" class="material-button" onclick="selectedElement = 'nuke';">Nuke</button>
     <button class="material-button" onclick="selectedElement = 'empty';">None</button>
         <p>Brush size: <input type="range" id="brushSize"min="1"max="30" value="1"></p>
        <button id="pauseButton"></button> 
@@ -848,10 +852,146 @@ canvas.addEventListener('wheel', (e) => {
             color: '#D12A2A',
             type: 'solid',
             density: 2
+        },
+        charcoal:{
+            color: '#272727',
+            type: 'solid',
+            density: 0.5,
+            flammable: true
+        },
+        clay:{
+            color: '#B9B9B9',
+            type: 'solid',
+            density: 1
+        },
+        solidclay:{
+            color:'#898989',
+            type: 'solid',
+            denisty: 1.5
+        },
+        pig:{
+            color:'#FF7DEF',
+            type: 'solid',
+            density: 0.8,
+            flammable: true
+            
+        },
+        nuke:{
+            color:'#165900',
+            type: 'solid',
+            density: 3,
+            unsafe: true
         }
+    
            
         };
-                  const humanMovementDelay = 25; // Delay in frames before human can move again
+         
+        function handlepigMovement(cell, row, col) {
+     if (!cell.delay) cell.delay = 0; // Initialize delay counter if not defined
+ 
+     // Check for adjacent lava cells within a 5-cell radius
+     const lavaNearby = (r, c) => {
+         return grid[r] && grid[r][c] && elements[grid[r][c].element].unsafe;
+     };
+ 
+     let hasLavaNearby = false;
+     let lavaDirection = null;
+ 
+     // Check a 5-cell radius (11x11 area centered on the human)
+     for (let r = -5; r <= 5; r++) {
+         for (let c = -5; c <= 5; c++) {
+             const newRow = row + r;
+             const newCol = col + c;
+             if (Math.abs(r) + Math.abs(c) <= 5 && lavaNearby(newRow, newCol)) {
+                 hasLavaNearby = true;
+                 // Determine the direction of the lava
+                 if (r < 0) lavaDirection = 'down'; // Lava is above
+                 else if (r > 0) lavaDirection = 'up'; // Lava is below
+                 else if (c < 0) lavaDirection = 'right'; // Lava is left
+                 else if (c > 0) lavaDirection = 'left'; // Lava is right
+                 break;
+             }
+         }
+         if (hasLavaNearby) break; // Exit early if lava is found
+     }
+ 
+     // Determine movement delay based on proximity to lava
+     const movementDelay = hasLavaNearby ? humanMovementDelay / 10 : humanMovementDelay; // Move faster if near lava
+ 
+     // Increment delay
+     cell.delay++;
+ 
+     // Check if the human can fall due to gravity
+     if (row < rows - 1 && grid[row + 1][col].element === 'empty') {
+         // Move down
+         grid[row + 1][col].element = 'pig'; // Move the human to the cell below
+         cell.element = 'empty'; // Set the old cell to empty
+         cell.delay = 0; // Reset delay after moving
+         return; // Exit the function after moving down
+     }
+ 
+     // If the human cannot fall, check for lateral movement
+     if (cell.delay >= movementDelay) { // Check if delay has passed
+         const directions = [
+             { row: 0, col: -1 }, // Left
+             { row: 0, col: 1 },  // Right
+         ];
+ 
+         // Determine the opposite direction based on lava direction
+         let oppositeDirection = null;
+         if (lavaDirection === 'up') oppositeDirection = { row: 1, col: 0 }; // Move down
+         else if (lavaDirection === 'down') oppositeDirection = { row: -1, col: 0 }; // Move up
+         else if (lavaDirection === 'left') oppositeDirection = { row: 0, col: 1 }; // Move right
+         else if (lavaDirection === 'right') oppositeDirection = { row: 0, col: -1 }; // Move left
+         
+         // If there's a detected lava direction, move in the opposite direction
+         if (oppositeDirection) {
+             const newRow = row + oppositeDirection.row;
+             const newCol = col - oppositeDirection.col;
+ 
+             // Check if the new position is within bounds and empty
+             if (newRow >= 0 && newRow < rows && newCol >= 0 && newCol < cols && grid[newRow][newCol].element === 'empty') {
+                 grid[newRow][newCol].element = 'pig'; // Move the human to the new cell
+                 cell.element = 'empty'; // Set the old cell to empty
+                 cell.delay = 0; // Reset delay after moving
+             } else {
+                 // If the cell is not empty, check if there's an empty space above to jump
+                 if (row > 0 && newRow < rows && newCol >= 0 && newCol < cols && grid[newRow][newCol].element !== 'empty' && grid[row - 1][newCol].element === 'empty') {
+                     grid[row - 1][newCol].element = 'pig'; // Move the human to the cell above the obstacle
+                     cell.element = 'empty'; // Set the old cell to empty
+                     cell.delay = 0; // Reset delay after jumping
+                 } else {
+                     // If unable to move or jump, reset delay
+                     cell.delay = 0; // Reset delay if unable to move
+                 }
+             }
+         } else {
+             // If no lava is detected, move randomly
+             const randomDirection = directions[Math.floor(Math.random() * directions.length)];
+             const newRow = row + randomDirection.row;
+             const newCol = col + randomDirection.col;
+ 
+             // Check if the new position is within bounds and empty
+             if (newRow >= 0 && newRow < rows && newCol >= 0 && newCol < cols && grid[newRow][newCol].element === 'empty') {
+                 grid[newRow][newCol].element = 'pig'; // Move the human to the new cell
+                 cell.element = 'empty'; // Set the old cell to empty
+                 cell.delay = 0; // Reset delay after moving
+             } else {
+                 // If the cell is not empty, check if there's an empty space above to jump
+                 if (row > 0 && newRow < rows && newCol >= 0 && newCol < cols && grid[newRow][newCol].element !== 'empty' && grid[row - 1][newCol].element === 'empty') {
+                     grid[row - 1][newCol].element = 'pig'; // Move the human to the cell above the obstacle
+                     cell.element = 'empty'; // Set the old cell to empty
+                     cell.delay = 0; // Reset delay after jumping
+                 } else {
+                     // If unable to move or jump, reset delay
+                     cell.delay = 0; // Reset delay if unable to move
+                 }
+             }
+         }
+     }
+ }
+     
+                const humanMovementDelay = 25; // Delay in frames before human can move again
        function handleHumanMovement(cell, row, col) {
     if (!cell.delay) cell.delay = 0; // Initialize delay counter if not defined
 
@@ -1711,6 +1851,62 @@ function updateGrid() {
     
 
   }}
+  if (cell.element === 'charcoal') {
+  // Check if steam is directly below the water
+  if (row < rows - 1 && grid[row + 1][col].element === 'smoke') {
+      // Swap water with steam
+      let smokeCell = grid[row + 1][col];
+
+      // Swap the elements
+      grid[row][col].element = 'smoke';
+      grid[row + 1][col].element = 'charcoal';
+
+      
+    
+
+  }}
+  if (cell.element === 'charcoal') {
+  // Check if steam is directly below the water
+  if (row < rows - 1 && grid[row + 1][col].element === 'steam') {
+      // Swap water with steam
+      let steamCell = grid[row + 1][col];
+
+      // Swap the elements
+      grid[row][col].element = 'steam';
+      grid[row + 1][col].element = 'charcoal';
+
+      
+    
+
+  }}
+  if (cell.element === 'clay') {
+  // Check if steam is directly below the water
+  if (row < rows - 1 && grid[row + 1][col].element === 'steam') {
+      // Swap water with steam
+      let steamCell = grid[row + 1][col];
+
+      // Swap the elements
+      grid[row][col].element = 'steam';
+      grid[row + 1][col].element = 'clay';
+
+      
+    
+
+  }}
+  if (cell.element === 'clay') {
+  // Check if steam is directly below the water
+  if (row < rows - 1 && grid[row + 1][col].element === 'smoke') {
+      // Swap water with steam
+      let smokeCell = grid[row + 1][col];
+
+      // Swap the elements
+      grid[row][col].element = 'smoke';
+      grid[row + 1][col].element = 'clay';
+
+      
+    
+
+  }}
   if (cell.element === 'concrete') {
   // Check if steam is directly below the water
   if (row < rows - 1 && grid[row + 1][col].element === 'water') {
@@ -1750,6 +1946,19 @@ function updateGrid() {
     
 
   }}
+  if (cell.element === 'charcoal') {
+  // Check if steam is directly below the water
+  if (row < rows - 1 && grid[row + 1][col].element === 'water') {
+      // Swap water with steam
+      let waterCell = grid[row - 1][col];
+
+      // Swap the elements
+      grid[row][col].element = 'water';
+      grid[row + 1][col].element = 'charcoal';
+
+    
+
+  }}
   if (cell.element === 'grenade') {
   // Check if steam is directly below the water
   if (row < rows - 1 && grid[row + 1][col].element === 'water') {
@@ -1759,6 +1968,19 @@ function updateGrid() {
       // Swap the elements
       grid[row][col].element = 'water';
       grid[row + 1][col].element = 'grenade';
+
+    
+
+  }}
+  if (cell.element === 'clay') {
+  // Check if steam is directly below the water
+  if (row < rows - 1 && grid[row + 1][col].element === 'water') {
+      // Swap water with steam
+      let waterCell = grid[row - 1][col];
+
+      // Swap the elements
+      grid[row][col].element = 'water';
+      grid[row + 1][col].element = 'clay';
 
     
 
@@ -2041,6 +2263,20 @@ function updateGrid() {
                          cell.delay = 0;
                      }
 
+  }
+  if(cell.element==='nuke' && row < rows - 1){
+     if (grid[row + 1][col].element === 'empty') {
+                      
+                         
+                      grid[row + 1][col].element = 'nuke';
+                      cell.element = 'empty';
+                  
+                  } else cell.element='UExplosion';
+  }
+  if(cell.element ==='nuke'){
+     if(row = rows - 1){
+         cell.element='UExplosion';
+     }
   }
   if (cell.element === 'random') {
               // List of possible elements to replace the virus
@@ -4752,6 +4988,100 @@ function updateGrid() {
                          }
                      }
          }
+         if(cell.element==='clay'){
+             const laseradjacentCells = [{
+                             row: row - 1,
+                             col: col
+                         }, // Up
+                         {
+                             row: row + 1,
+                             col: col
+                         }, // Down
+                         {
+                             row: row,
+                             col: col - 1
+                         }, // Left
+                         {
+                             row: row,
+                             col: col + 1
+                         } // Right
+                     ];
+                     const laserAdjacent = laseradjacentCells.some(({
+                             row: r,
+                             col: c
+                         }) =>
+                         grid[r] && grid[r][c] && grid[r][c].element === 'laser'
+                     );
+
+
+
+
+
+
+
+
+                     // If water is adjacent to grass, start or increment the delay
+                     if (laserAdjacent) {
+                         cell.laserdelay++;
+
+
+
+
+
+
+
+
+                         // Replace water with grass after delay of 30 frames
+                         if (cell.laserdelay >= 5) {
+                         
+                    
+                     
+                             cell.element = 'solidclay';
+                             cell.laserdelay = 0;
+                         }
+                     }
+         }
+         if(cell.element==='solidclay'){
+             const laseradjacentCells = [{
+                             row: row - 1,
+                             col: col
+                         }
+                     ];
+                     const laserAdjacent = laseradjacentCells.some(({
+                             row: r,
+                             col: c
+                         }) =>
+                         grid[r] && grid[r][c] && grid[r][c].element === 'laser'
+                     );
+
+
+
+
+
+
+
+
+                     // If water is adjacent to grass, start or increment the delay
+                     if (laserAdjacent) {
+                         cell.laserdelay++;
+
+
+
+
+
+
+
+
+                         // Replace water with grass after delay of 30 frames
+                         if (cell.laserdelay >= 5) {
+                         
+                    
+                     
+                             cell.element = 'empty';
+                             cell.laserdelay = 0;
+                         }
+                     }
+         }
 
 
                  if (cell.element === 'water') {
@@ -5305,6 +5635,15 @@ if (cell.element === 'liquidN' && row < rows - 1) {
                         
                      }
                 }
+                if(cell.element==='clay'){
+                 cell.age++;
+                 
+                 if(cell.age>=200){
+                          if (Math.random() < 0.08) {
+                          cell.element='solidclay';
+                          }
+                      }
+                }
                 if (cell.element==='sand'){
                   const adjacentCellssa = [
                       { row: row + 1,
@@ -5335,6 +5674,29 @@ if (cell.element === 'liquidN' && row < rows - 1) {
                      }
                 }
                  // Handle sand physics
+                 if (cell.element === 'charcoal' && row < rows - 1) {
+                    
+                    if (grid[row + 1][col].element === 'empty') {
+                        grid[row + 1][col].element = 'charcoal';
+                        cell.element = 'empty'; }
+                   
+                     else {
+                        let leftSpread = col > 0 && grid[row + 1][col - 1].element === 'empty';
+                        let rightSpread = col < cols - 1 && grid[row + 1][col + 1].element === 'empty';
+                        if (leftSpread && rightSpread) {
+                            if (Math.random() < 0.5) leftSpread = false;
+                            else rightSpread = false;
+                        }
+                        if (leftSpread) {
+                            grid[row + 1][col - 1].element = 'charcoal';
+                            cell.element = 'empty';
+                        } else if (rightSpread) {
+                            grid[row + 1][col + 1].element = 'charcoal';
+                            cell.element = 'empty';
+                        }
+                    }
+                }
+                 // Handle sand physics
                  if (cell.element === 'dirt' && row < rows - 1) {
                     
                      if (grid[row + 1][col].element === 'empty') {
@@ -5357,6 +5719,28 @@ if (cell.element === 'liquidN' && row < rows - 1) {
                          }
                      }
                  }
+                 if (cell.element === 'clay' && row < rows - 1) {
+                    
+                    if (grid[row + 1][col].element === 'empty') {
+                        grid[row + 1][col].element = 'clay';
+                        cell.element = 'empty'; }
+                   
+                     else {
+                        let leftSpread = col > 0 && grid[row + 1][col - 1].element === 'empty';
+                        let rightSpread = col < cols - 1 && grid[row + 1][col + 1].element === 'empty';
+                        if (leftSpread && rightSpread) {
+                            if (Math.random() < 0.5) leftSpread = false;
+                            else rightSpread = false;
+                        }
+                        if (leftSpread) {
+                            grid[row + 1][col - 1].element = 'clay';
+                            cell.element = 'empty';
+                        } else if (rightSpread) {
+                            grid[row + 1][col + 1].element = 'clay';
+                            cell.element = 'empty';
+                        }
+                    }
+                }
                  if (cell.element === 'salt' && row < rows - 1) {
                     
                     if (grid[row + 1][col].element === 'empty') {
@@ -5379,6 +5763,7 @@ if (cell.element === 'liquidN' && row < rows - 1) {
                         }
                     }
                 }
+               
                      // Handle sand physics
                      if (cell.element === 'cloner' && row < rows - 1) {
                     
@@ -6460,6 +6845,10 @@ if (cell.element === 'human') {
               handleHumanMovement(cell, row, col);
 
           }
+          if (cell.element === 'pig') {
+              handlepigMovement(cell, row, col);
+
+          }
 // Handle Steam Physics
 if (cell.element === 'snow' && row < rows - 1) {
   cell.age++;
@@ -6601,7 +6990,8 @@ if (cell.element === 'ash' && row < rows - 1) {
   }
   }
 
-}     
+}
+
 
 if (cell.element === 'fly' && row < rows - 1) {
   cell.age++;
@@ -7438,7 +7828,7 @@ if (cell.element === 'fog') {
              }
          }
      }
-           let lastPlacementTime = 0; // Variable to store the last placement time
+              let lastPlacementTime = 0; // Variable to store the last placement time
        const placementCooldown = 10; // Cooldown in milliseconds (adjust as needed)
        function placeElement(x, y) {
      const currentTime = Date.now(); // Get the current time
