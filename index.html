@@ -1096,18 +1096,20 @@ canvas.addEventListener('wheel', (e) => {
         }
     }
 }
-       function initializeGrid() {
-          for (let row = 0; row < rows; row++) {
-              grid[row] = [];
-              for (let col = 0; col < cols; col++) {
-                  grid[row][col] = {
-                      element: 'empty',
-                      age: 0,
-                      uraniumColor: 'green' // Add this line
-                  };
-              }
-          }
-      }
+function initializeGrid() {
+           for (let row = 0; row < rows; row++) {
+               grid[row] = [];
+               for (let col = 0; col < cols; col++) {
+                   grid[row][col] = {
+                       element: 'empty',
+                       age: 0,
+                       uraniumColor: 'green', // Add this line
+                       delay: 0,
+                       laserdelay: 0
+                   };
+               }
+           }
+       }
 
        // Initialize grid with lava properties (if necessary)
        function initializeLavaCell(cell) {
